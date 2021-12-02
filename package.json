@@ -1,0 +1,54 @@
+{
+  "name": "HandballCH-widget",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start-all": "concurrently \"yarn run start\" \"yarn run mock-api\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "mock-api": "json-server --watch mock-api/db.json --routes mock-api/routes.json --port 3001"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "concurrently": "^6.4.0",
+    "http-proxy-middleware": "^2.0.1",
+    "json-server": "^0.17.0",
+    "sass": "^1.44.0"
+  }
+}

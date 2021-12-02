@@ -1,0 +1,9 @@
+{
+  "short_name": "Handball CH Widget",
+  "name": "Handball CH Widget Service",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,4 @@
+{
+    "/rest/v1/clubs/:id/games?status=played": "/games-played",
+    "/rest/v1/clubs/:id/games?status=planned": "/games-planned"
+}

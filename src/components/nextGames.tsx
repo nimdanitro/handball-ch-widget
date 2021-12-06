@@ -12,7 +12,7 @@ function NextGames({ games }: NextGamesProps) {
         <div className="container is-fluid">
             <h1 className="title">Nächste Spiele</h1>
             <div className="table-container">
-                <table className="table is-hoverable is-fullwidth is-striped">
+                <table className="table is-hoverable is-narrow is-fullwidth is-striped">
                     <thead>
                         <tr>
                             <th>Datum</th>

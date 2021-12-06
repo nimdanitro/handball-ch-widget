@@ -12,7 +12,7 @@ function Results({ games }: ResultsProps) {
         <div className="container is-fluid">
             <h1 className="title">Letzte Resultate</h1>
             <div className="table-container">
-                <table className="table is-hoverable is-fullwidth is-striped">
+                <table className="table is-hoverable is-narrow is-fullwidth is-striped">
                     <thead>
                         <tr>
                             <th>Datum</th>

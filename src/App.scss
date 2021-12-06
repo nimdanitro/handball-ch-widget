@@ -1,15 +1,15 @@
 @charset "utf-8";
 
-// Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+// Redefine black as black black :)
+$black: hsl(0, 0%, 0%) !default;
+
 @import "~bulma/sass/utilities/initial-variables.sass";
 
-$body-background-color: $black;
-
 $primary: rgba(255, 209, 0, 1);
-$link: $primary;
+$body-background-color: $black;
+$link: $yellow;
 $text: $white-bis;
-$text-strong: $white-bis;
+$text-strong: $white-ter;
 $border: $primary;
 
 
@@ -17,6 +17,7 @@ $table-background-color: $black;
 $table-row-hover-background-color: $black-bis;
 $table-striped-row-even-hover-background-color: $black-ter;
 $table-striped-row-even-background-color: $black-bis;
+$table-cell-border-width: 0 0 0;
 
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";

@@ -2,8 +2,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders help by default', () => {
+test('renders by default', () => {
+
   render(<App />);
-  const linkElement = screen.getByText(/Handball IframeTool/i);
+  const linkElement = screen.getByText(/Handball Resultate und Spiele/i);
   expect(linkElement).toBeInTheDocument();
 });

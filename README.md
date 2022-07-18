@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+# Handball Schweiz API Widget
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project allows you to view and embed last restults and next games for teams and clubs using the [API from Handball Schweiz](https://www.handball.ch/media/1845/vat-anleitung-dataservice_de.pdf)
 
-## Available Scripts
+## How to use
 
-In the project directory, you can run:
+You can iframe the following URLs:
 
-### `yarn start`
+- See all results and next games of a club: [https://${hostname}/verein/${club.id}](https://${hostname}/verein/140675) where $(club.id) is the ID of the club as seen in the Matchcenter URL of Handball Schweiz: e.g. 140675 for [https://www.handball.ch/de/matchcenter/vereine/140675](https://www.handball.ch/de/matchcenter/vereine/140675)
+- See all results and next games of a team: [https://${hostname}/team/${team.id}](https://${hostname}/team/36184) where $(team.id) is the ID of the team as seen in the Matchcenter URL of Handball Schweiz: e.g. 36184 for [https://www.handball.ch/de/matchcenter/teams/36184](https://www.handball.ch/de/matchcenter/teams/36184)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Controlling the number of results and next games
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+By default the last 10 and the next 10 games are displayed for both club and team. This can be changed by adding the following query parameters:
 
-### `yarn test`
+- results: for defining the number of played games displayed
+- next: for defining the number of planned games displayed
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Hence, if you want do display the last 20 results and the next 30 games of club 140675, you would use the following URL:
 
-### `yarn build`
+[https://${hostname}/verein/140675?results=20&next=30](https://${hostname}/verein/140675?results=20&next=30)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Acknowledgements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project has been created in collaboration with the [HC KTV Altdorf](https://hc-ktv-altdorf.ch/).

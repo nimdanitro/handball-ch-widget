@@ -16,8 +16,5 @@ jobs:
       - name: Install packages
         run: yarn install
 
-      - name: Run Typescript Checks
-        run: yarn lint
-
-      - name: run tests
+      - name: Run tests
         run: yarn test

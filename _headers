@@ -1,3 +1,6 @@
 /*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: document-domain=()
   Content-Security-Policy: default-src 'self' https:; script-src 'self' ajax.cloudflare.com static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src-elem 'self' https:; style-src-elem 'self' https://fonts.googleapis.com https:; connect-src 'self' cloudflareinsights.co; frame-ancestors 'self' https://hc-ktv-altdorf.ch https://*.hc-ktv-altdorf.ch;
-

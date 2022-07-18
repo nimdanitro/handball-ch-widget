@@ -7,7 +7,7 @@ function Help() {
         <section className="section">
 
             <div className="container is-fluid">
-                <h1 className="title">Handball Resultate und Spiele</h1>
+                <h1 className="title is-uppercase">Handball Resultate und Spiele</h1>
                 <ul>
                     <li>
                         <Link to="/verein/140675">Verwende /verein/140675 fuer einen ganzen Verein, z.B. 140675</Link>

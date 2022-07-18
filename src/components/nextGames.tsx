@@ -10,7 +10,7 @@ function NextGames({ games }: NextGamesProps) {
 
     return (
         <div className="container is-fluid">
-            <h1 className="title">Nächste Spiele</h1>
+            <h1 className="title is-uppercase">Nächste Spiele</h1>
             <div className="table-container">
                 <table className="table is-hoverable is-narrow is-fullwidth is-striped">
                     <thead>

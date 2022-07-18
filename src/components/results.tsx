@@ -10,7 +10,7 @@ function Results({ games }: ResultsProps) {
 
     return (
         <div className="container is-fluid">
-            <h1 className="title">Letzte Resultate</h1>
+            <h1 className="title is-uppercase is-size-3">Letzte Resultate</h1>
             <div className="table-container">
                 <table className="table is-hoverable is-narrow is-fullwidth is-striped">
                     <thead>
@@ -24,7 +24,7 @@ function Results({ games }: ResultsProps) {
                             <th>Zuschauer</th>
                             <th>Details</th>
                         </tr>
-                    </thead>
+                    </thead> 
                     <tbody>
                         {games.map(game => (
                             <tr key={game.gameId}>

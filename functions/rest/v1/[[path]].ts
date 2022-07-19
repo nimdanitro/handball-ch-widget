@@ -2,22 +2,20 @@ export async function onRequestGet({ request, env, params }) {
     const url = new URL(request.url);
 
     const cache = caches.default;
-    const cacheKey = new Request(url.toString(), request);
-
-    let res = await cache.match(cacheKey);
+    const apiReq = new Request(`https://api.handball.ch${url.pathname}?${url.searchParams}`)
+    
+    let res = await cache.match(apiReq);
     if (!res) {
-        let apiReq = new Request(`https://api.handball.ch${url.pathname}?${url.searchParams}`)
 
         res = await fetch(apiReq, {
             cf: {
-                cacheTtl: 5,
+                cacheTtl: 60,
                 cacheEverything: true,
             },
             headers: {
                 "Authorization": `Basic ${env.API_KEY}`,
             }
         });
-
     }
 
     // Reconstruct the Response object to make its headers mutable.

@@ -23,8 +23,8 @@ export async function onRequestGet({ request, env, params }) {
     // Reconstruct the Response object to make its headers mutable.
     let response = new Response(res.body, res);
 
-    // Set cache control headers to cache on browser for 25 minutes
-    response.headers.set('Cache-Control', 'max-age=1500');
+    // Set cache control headers to cache on browser for 60 minutes
+    response.headers.set('Cache-Control', 'max-age=3600');
 
     await cache.put(cacheKey, response.clone());
 

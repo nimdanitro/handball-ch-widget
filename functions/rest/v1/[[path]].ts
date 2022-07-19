@@ -24,7 +24,7 @@ export async function onRequestGet({ request, env, params }) {
     // Set cache control headers to cache on browser for 60 minutes
     response.headers.set('Cache-Control', 'max-age=3600');
 
-    await cache.put(cacheKey, response.clone());
+    await cache.put(apiReq, response.clone());
 
     return response;
 }

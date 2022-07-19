@@ -1,6 +1,6 @@
 # Handball Schweiz API Widget
 
-This project allows you to view and embed last restults and next games for teams and clubs using the [API from Handball Schweiz](https://www.handball.ch/media/1845/vat-anleitung-dataservice_de.pdf)
+This project allows you to view and embed last results and next games for teams and clubs using the [API from Handball Schweiz](https://www.handball.ch/media/1845/vat-anleitung-dataservice_de.pdf)
 
 ## How to use
 

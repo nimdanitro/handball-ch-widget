@@ -11,12 +11,32 @@ $family-primary: $family-serif;
 @import "~bulma/sass/utilities/initial-variables.sass";
 
 $primary: rgba(255, 209, 0, 1);
-$body-background-color: $black;
-$link: $yellow;
-$text: $white-bis;
-$text-strong: $white-ter;
-$border: $primary;
+$background-color: $black;
+$body-background-color: $black-bis;
+$background: $grey-darker;
+$footer-background-color: $background;
+$border: $grey-dark;
+$border: $grey-light;
 
+$title-color: $white;
+$subtitle-color: $white-ter;
+$subtitle-strong-color: $white-ter;
+
+$text: $white;
+$text-light: lighten($text, 10);
+$text-strong: darken($text, 5);
+
+$link: $yellow;
+
+$box-color: $text;
+$box-background-color: $grey-darker;
+$box-shadow: none;
+
+$border: $primary;
+$card-background-color: $black-ter;
+$card-content-background-color: $black-ter;
+$card-footer-background-color: $black-ter;
+$shadow: $grey-light;
 
 $table-background-color: $black;
 $table-row-hover-background-color: $black-bis;
@@ -26,9 +46,16 @@ $table-cell-border-width: 0 0 0;
 
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/_all.sass";
+@import "~bulma/sass/elements/box.sass";
 @import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/elements/icon.sass";
 @import "~bulma/sass/elements/table.sass";
 @import "~bulma/sass/layout/section.sass";
-@import "~bulma/sass/layout/section.sass";
+
+@import "~bulma/sass/components/_all.sass";
+@import "~bulma/sass/components/card.sass";
 @import "~bulma/sass/helpers/_all.sass";
+@import "~bulma/sass/grid/columns.sass";

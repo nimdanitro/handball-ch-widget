@@ -9,7 +9,7 @@ interface ResultsProps {
 function ResultsTable({ games }: ResultsProps) {
   return (
     <div className="container">
-      <h1 className="title is-uppercase is-size-3">Letzte Resultate</h1>
+      <h1 className="title is-uppercase is-size-4">Letzte Resultate</h1>
       <div className="table-container">
         <table className="table is-hoverable is-narrow is-fullwidth is-striped">
           <thead>
@@ -65,7 +65,7 @@ function ResultsTable({ games }: ResultsProps) {
 function ResultsCards({ games }: ResultsProps) {
   return (
     <div className="container">
-      <h1 className="title is-uppercase">Nächste Spiele</h1>
+      <h1 className="title is-uppercase is-size-4">Letzte Resultate</h1>
       {games.map((game) => (
         <div className="card mb-1" key={game.gameId}>
           <div className="card-content">

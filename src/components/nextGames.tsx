@@ -9,7 +9,7 @@ interface NextGamesProps {
 function NextGamesTable({ games }: NextGamesProps) {
   return (
     <div className="container">
-      <h1 className="title is-uppercase">Nächste Spiele</h1>
+      <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
       <div className="table-container">
         <table className="table is-hoverable is-narrow is-fullwidth is-striped">
           <thead>
@@ -74,7 +74,7 @@ function NextGamesTable({ games }: NextGamesProps) {
 function NextGamesCard({ games }: NextGamesProps) {
   return (
     <div className="container">
-      <h1 className="title is-uppercase">Nächste Spiele</h1>
+      <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
       {games.map((game) => (
         <div className="card mb-1" key={game.gameId}>
           <div className="card-content">

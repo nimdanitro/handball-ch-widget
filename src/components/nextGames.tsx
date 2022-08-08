@@ -6,9 +6,11 @@ interface NextGamesProps {
   games: GamesPlanned[];
 }
 
-function NextGames({ games }: NextGamesProps) {
+function NextGamesTable({ games }: NextGamesProps) {
+  if (games.length === 0) return null;
+
   return (
-    <div className="container is-fluid">
+    <div className="container">
       <h1 className="title is-uppercase">Nächste Spiele</h1>
       <div className="table-container">
         <table className="table is-hoverable is-narrow is-fullwidth is-striped">
@@ -40,9 +42,23 @@ function NextGames({ games }: NextGamesProps) {
                 <td>{game.leagueLong}</td>
                 <td>{game.teamAName}</td>
                 <td>{game.teamBName}</td>
-                <td>{game.venue}</td>
+                <td>
+                  {" "}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
+                      " ",
+                      "+"
+                    )},+${game.venueCity.replaceAll(" ", "+")}`}
+                  >
+                    {game.venue}
+                  </a>
+                </td>
                 <td>
                   <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
                   >
                     Live-Ticker
@@ -58,17 +74,29 @@ function NextGames({ games }: NextGamesProps) {
 }
 
 function NextGamesCard({ games }: NextGamesProps) {
+  if (games.length === 0) return null;
+
   return (
     <div className="container">
       <h1 className="title is-uppercase">Nächste Spiele</h1>
       {games.map((game) => (
-        <div className="card mb-1">
+        <div className="card mb-1" key={game.gameId}>
           <div className="card-content">
             <div className="content">
               <div className="container">
-                <div className="columns is-gapless is-mobile">
-                  <div className="column has-text-primary is-size-7 is-half">
+                <div className="columns is-gapless is-size-7 is-mobile">
+                  <div className="column has-text-primary">
                     <p>{game.leagueShort}</p>
+                  </div>
+                  <div className="column is-size-7 is-half has-text-right">
+                    <a
+                      className="has-text-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
+                    >
+                      Live-Ticker
+                    </a>
                   </div>
                 </div>
               </div>
@@ -76,13 +104,13 @@ function NextGamesCard({ games }: NextGamesProps) {
                 <div className="column is-one-third is-size-6">
                   {game.teamAName}
                 </div>
-                <div className="column is-one-third is-size-6 has-text-centered is-hidden-touch">
+                <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
                   -
                 </div>
-                <div className="column is-one-third is-size-6 has-text-right is-hidden-touch">
+                <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
                   {game.teamBName}
                 </div>
-                <div className="column is-one-third is-size-6 is-hidden-desktop">
+                <div className="column is-one-third is-size-6 is-hidden-tablet">
                   {game.teamBName}
                 </div>
               </div>
@@ -96,6 +124,8 @@ function NextGamesCard({ games }: NextGamesProps) {
                 <div className="column is-size-7 is-half has-text-right">
                   <a
                     className="has-text-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
                       " ",
                       "+"
@@ -113,4 +143,4 @@ function NextGamesCard({ games }: NextGamesProps) {
   );
 }
 
-export default NextGamesCard;
+export { NextGamesCard, NextGamesTable };

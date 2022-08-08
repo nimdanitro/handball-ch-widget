@@ -2,6 +2,13 @@
 
 This project allows you to view and embed last results and next games for teams and clubs using the [API from Handball Schweiz](https://www.handball.ch/media/1845/vat-anleitung-dataservice_de.pdf)
 
+## Introduction
+
+This is a small react app, optimized to run on Cloudflare Pages. The serverless function will add the club specific auth token for API requests going to the [API from Handball Schweiz](https://www.handball.ch/media/1845/vat-anleitung-dataservice_de.pdf). You need to set the following environment variables on the cloudflare pages project:
+
+- API_KEY: with the base64 encoded API key from Handball Schweiz
+- FRAME_ANCESTORS: set a space separated list of domains which should be added to the frame-ancestor CSP header
+
 ## How to use
 
 You can iframe the following URLs:

@@ -3,4 +3,4 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
   Permissions-Policy: document-domain=()
-  Content-Security-Policy: script-src 'self'; frame-ancestors 'self' https://hc-ktv-altdorf.ch https://*.hc-ktv-altdorf.ch;
+  Content-Security-Policy: default-src: 'self'; script-src 'self'; frame-ancestors 'self' https://hc-ktv-altdorf.ch https://*.hc-ktv-altdorf.ch; font-src 'self' https://fonts.gstatic.com; syle-src 'self' https://fonts.googleapis.com; 

@@ -24,7 +24,13 @@ function Results() {
       .then((data) => setGames(data));
   }, [id, numResults]);
 
-  return <ResultsTable games={games} />;
+  if (games.length === 0) return null;
+
+  return (
+    <section className="section">
+      <ResultsTable games={games} />
+    </section>
+  );
 }
 
 function NextGames() {
@@ -42,28 +48,26 @@ function NextGames() {
       .then((data) => setGames(data));
   }, [id, numNext]);
 
+  if (games.length === 0) return null;
+
   return (
-    <>
+    <section className="section">
       <div className="is-hidden-touch">
         <NextGamesTable games={games} />
       </div>
       <div className="is-hidden-desktop">
         <NextGamesCard games={games} />
       </div>
-    </>
+    </section>
   );
 }
 
 function Verein() {
   return (
-    <div>
-      <section className="section">
-        <Results />
-      </section>
-      <section className="section">
-        <NextGames />
-      </section>
-    </div>
+    <>
+      <Results />
+      <NextGames />
+    </>
   );
 }
 

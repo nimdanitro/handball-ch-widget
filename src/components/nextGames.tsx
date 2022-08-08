@@ -7,8 +7,6 @@ interface NextGamesProps {
 }
 
 function NextGamesTable({ games }: NextGamesProps) {
-  if (games.length === 0) return null;
-
   return (
     <div className="container">
       <h1 className="title is-uppercase">Nächste Spiele</h1>
@@ -74,8 +72,6 @@ function NextGamesTable({ games }: NextGamesProps) {
 }
 
 function NextGamesCard({ games }: NextGamesProps) {
-  if (games.length === 0) return null;
-
   return (
     <div className="container">
       <h1 className="title is-uppercase">Nächste Spiele</h1>

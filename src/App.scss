@@ -44,6 +44,8 @@ $table-striped-row-even-hover-background-color: $black-ter;
 $table-striped-row-even-background-color: $black-bis;
 $table-cell-border-width: 0 0 0;
 
+$section-padding: 2rem 0.5rem;
+
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";
 @import "~bulma/sass/elements/_all.sass";

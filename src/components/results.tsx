@@ -7,8 +7,6 @@ interface ResultsProps {
 }
 
 function ResultsTable({ games }: ResultsProps) {
-  if (games.length === 0) return null;
-
   return (
     <div className="container">
       <h1 className="title is-uppercase is-size-3">Letzte Resultate</h1>
@@ -65,7 +63,6 @@ function ResultsTable({ games }: ResultsProps) {
 }
 
 function ResultsCards({ games }: ResultsProps) {
-  if (games.length === 0) return null;
   return (
     <div className="container">
       <h1 className="title is-uppercase">Nächste Spiele</h1>

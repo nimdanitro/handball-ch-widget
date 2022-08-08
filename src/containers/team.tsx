@@ -25,7 +25,11 @@ export function Results() {
       .catch((err) => console.log(err));
   }, [id, numResults]);
 
-  return <ResultsTable games={games} />;
+  return (
+    <section className="section">
+      <ResultsTable games={games} />
+    </section>
+  );
 }
 
 export function NextGames() {
@@ -46,27 +50,23 @@ export function NextGames() {
   }, [id, numNext]);
 
   return (
-    <>
+    <section className="section">
       <div className="is-hidden-touch">
         <NextGamesTable games={games} />
       </div>
       <div className="is-hidden-desktop">
         <NextGamesCard games={games} />
       </div>
-    </>
+    </section>
   );
 }
 
 function Team() {
   return (
-    <div>
-      <section className="section">
-        <Results />
-      </section>
-      <section className="section">
-        <NextGames />
-      </section>
-    </div>
+    <>
+      <Results />
+      <NextGames />
+    </>
   );
 }
 

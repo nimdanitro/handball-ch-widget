@@ -8024,6 +8024,11 @@ renderkid@^3.0.0:
     lodash "^4.17.21"
     strip-ansi "^6.0.1"
 
+replace-env@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/replace-env/-/replace-env-1.0.4.tgz#b93e9aa29ca9985cd7a2d86d3c0d134ba276dcc7"
+  integrity sha512-MKth8E8LMmRV9KP7bEFv7B+6JxVjqd85NcvqSKTrYy/AqMcSfrAsWbhOsjSksaBAu6f3otOjmUNR0gZESJPqLQ==
+
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"

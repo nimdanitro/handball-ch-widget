@@ -1,0 +1,6 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: document-domain=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; frame-ancestors 'self' %FRAME_ANCESTORS%; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; connect-src 'self' https://cloudflareinsights.com;

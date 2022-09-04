@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { GamePlayed, GamesPlanned } from "../types/games";
 
-import { ResultsTable } from "../components/results";
-import { NextGamesTable, NextGamesCard } from "../components/nextGames";
+import { NextGamesCard, NextGamesTable } from "../components/nextGames";
+import { ResultsCards, ResultsTable } from "../components/results";
 
 import { useParams, useSearchParams } from "react-router-dom";
 
@@ -28,7 +28,12 @@ function Results() {
 
   return (
     <section className="section">
-      <ResultsTable games={games} />
+      <div className="is-hidden-touch">
+        <ResultsTable games={games} />
+      </div>
+      <div className="is-hidden-desktop">
+        <ResultsCards games={games} />
+      </div>
     </section>
   );
 }

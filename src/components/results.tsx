@@ -1,4 +1,3 @@
-import React from "react";
 
 import { GamePlayed } from "../types/games";
 
@@ -82,7 +81,7 @@ function ResultsCards({ games }: ResultsProps) {
                       rel="noopener noreferrer"
                       href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
                     >
-                      Live-Ticker
+                      Matchcenter
                     </a>
                   </div>
                 </div>
@@ -101,18 +100,15 @@ function ResultsCards({ games }: ResultsProps) {
                   {game.teamBName}
                 </div>
               </div>
-              <div className="columns mb-1 is-gapless">
+              <div className="columns mb-1 is-gapless is-mobile">
                 <div className="column is-one-third is-size-6">
-                  {game.teamAScoreFT}({game.teamAScoreHT})
+                  {game.teamAScoreFT} ({game.teamAScoreHT})
                 </div>
-                <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
+                <div className="column is-one is-size-6 has-text-centered">
                   -
                 </div>
-                <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  ({game.teamBScoreHT}){game.teamBScoreFT}
-                </div>
-                <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  {game.teamBScoreFT}
+                <div className="column is-one-third is-size-6 has-text-right">
+                  {game.teamBScoreFT} ({game.teamBScoreHT})
                 </div>
               </div>
               <div className="columns is-gapless is-size-7 is-mobile">

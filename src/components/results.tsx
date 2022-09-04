@@ -100,33 +100,32 @@ function ResultsCards({ games }: ResultsProps) {
                   {game.teamBName}
                 </div>
               </div>
-              <div className="columns mb-1 is-gapless is-mobile">
-                <div className="column is-one-third is-size-6">
-                  {game.teamAScoreFT} ({game.teamAScoreHT})
+              <div className="columns mt-1 is-gapless">
+                <div className="column is-full is-size-6 has-text-centered">
+                  {game.teamAScoreFT} : {game.teamBScoreFT}
                 </div>
-                <div className="column is-one is-size-6 has-text-centered">
-                  -
-                </div>
-                <div className="column is-one-third is-size-6 has-text-right">
-                  {game.teamBScoreFT} ({game.teamBScoreHT})
+                <div className="column is-full is-size-6 has-text-centered">
+                  ({game.teamAScoreHT} : {game.teamBScoreHT})
                 </div>
               </div>
               <div className="columns is-gapless is-size-7 is-mobile">
-                <div className="column has-text-primary">
+                <div className="column is-half has-text-primary">
                   {new Intl.DateTimeFormat("de-CH", {
                     dateStyle: "medium",
                     timeStyle: "short",
                   }).format(new Date(game.gameDateTime))}
                 </div>
                 <div className="column is-size-7 is-half has-text-right">
+                  {game.venue}<br />
                   Zuschauer: {game.spectators}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ))}
-    </div>
+      ))
+      }
+    </div >
   );
 }
 

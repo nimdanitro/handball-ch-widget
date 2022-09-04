@@ -12,8 +12,12 @@ export interface GamePlayed {
     teamAScoreHT: number,
     teamBScoreHT: number,
     teamAScoreFT: number,
-    teamBScoreFT: number
+    teamBScoreFT: number,
     spectators: number,
+    venue: string,
+    venueAddress: string,
+    venueZip: number,
+    venueCity: string,
 };
 
 

@@ -100,11 +100,11 @@ function ResultsCards({ games }: ResultsProps) {
                   {game.teamBName}
                 </div>
               </div>
-              <div className="columns mt-1 is-gapless">
-                <div className="column is-full is-size-6 has-text-centered">
+              <div className="columns is-gapless is-mobile">
+                <div className="column mr-2 is-half is-size-6 has-text-right">
                   {game.teamAScoreFT} : {game.teamBScoreFT}
                 </div>
-                <div className="column is-full is-size-6 has-text-centered">
+                <div className="column is-half is-size-6 has-text-left">
                   ({game.teamAScoreHT} : {game.teamBScoreHT})
                 </div>
               </div>

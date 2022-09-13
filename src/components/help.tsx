@@ -13,7 +13,7 @@ function Help() {
                         <Link to="/verein/140675">Verwende /verein/140675 fuer einen ganzen Verein, z.B. 140675</Link>
                     </li>
                     <li>
-                        <Link to="/team/34772">Verwende /team/34772 fuer ein einzelnes Team, z.B. 34772</Link>
+                        <Link to="/team/36184">Verwende /team/36184 fuer ein einzelnes Team, z.B. 36184</Link>
                     </li>
                 </ul>
             </div >

@@ -20,7 +20,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-all": "concurrently \"yarn run start\" \"yarn run mock-api\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "pre-build": "replace-env public/_headers",
@@ -57,7 +56,6 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^3.14.1",
     "bulma": "^0.9.4",
-    "concurrently": "^6.4.0",
     "http-proxy-middleware": "^2.0.1",
     "json-server": "^0.17.0",
     "replace-env": "^1.0.4",

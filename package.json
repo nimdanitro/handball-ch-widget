@@ -6,7 +6,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.5",
-    "@testing-library/user-event": "^12.1.10",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.0.3",
     "@types/node": "^16.11.45",
     "@types/react": "^17.0.38",

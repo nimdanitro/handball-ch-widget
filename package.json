@@ -59,7 +59,7 @@
     "http-proxy-middleware": "^2.0.1",
     "json-server": "^0.17.0",
     "replace-env": "^1.0.4",
-    "sass": "^1.44.0"
+    "sass": "^1.55.0"
   },
   "resolutions": {
     "@svgr/webpack": "^6.3.1"

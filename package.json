@@ -4,7 +4,7 @@
   "private": true,
   "license": "MPL-2.0",
   "dependencies": {
-    "@svgr/webpack": "^6.3.1",
+    "@svgr/webpack": "^6.5.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.4.3",
@@ -23,8 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "pre-build": "replace-env public/_headers",
-    "mock-api": "json-server --watch mock-api/db.json --routes mock-api/routes.json --port 3001"
+    "pre-build": "replace-env public/_headers"
   },
   "eslintConfig": {
     "extends": [
@@ -58,11 +57,11 @@
     "@cloudflare/workers-types": "^3.17.0",
     "bulma": "^0.9.4",
     "http-proxy-middleware": "^2.0.1",
-    "json-server": "^0.17.0",
     "replace-env": "^1.0.4",
     "sass": "^1.55.0"
   },
   "resolutions": {
-    "@svgr/webpack": "^6.3.1"
+    "@svgr/webpack": "^6.5.0",
+    "minimatch": "^3.0.8"
   }
 }

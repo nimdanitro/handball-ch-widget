@@ -1,4 +1,3 @@
-import React from "react";
 
 import { GamesPlanned } from "../types/games";
 
@@ -41,17 +40,17 @@ function NextGamesTable({ games }: NextGamesProps) {
                 <td>{game.teamAName}</td>
                 <td>{game.teamBName}</td>
                 <td>
-                  {" "}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
-                      " ",
-                      "+"
-                    )},+${game.venueCity.replaceAll(" ", "+")}`}
-                  >
-                    {game.venue}
-                  </a>
+                  {game.venueAddress && game.venueCity && game.venue &&
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
+                        " ",
+                        "+"
+                      )},+${game.venueCity.replaceAll(" ", "+")}`}
+                    >
+                      {game.venue}
+                    </a>}
                 </td>
                 <td>
                   <a
@@ -118,24 +117,26 @@ function NextGamesCard({ games }: NextGamesProps) {
                   }).format(new Date(game.gameDateTime))}
                 </div>
                 <div className="column is-size-7 is-half has-text-right">
-                  <a
-                    className="has-text-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
-                      " ",
-                      "+"
-                    )},+${game.venueCity.replaceAll(" ", "+")}`}
-                  >
-                    {game.venue}
-                  </a>
+                  {game.venueAddress && game.venueCity && game.venue &&
+                    <a
+                      className="has-text-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
+                        " ",
+                        "+"
+                      )},+${game.venueCity.replaceAll(" ", "+")}`}
+                    >
+                      {game.venue}
+                    </a>}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ))}
-    </div>
+      ))
+      }
+    </div >
   );
 }
 

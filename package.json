@@ -54,7 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20221111.1",
+    "@cloudflare/workers-types": "^4.20230307.0",
     "bulma": "^0.9.4",
     "http-proxy-middleware": "^2.0.1",
     "replace-env": "^1.0.4",

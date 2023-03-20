@@ -58,7 +58,7 @@
     "bulma": "^0.9.4",
     "http-proxy-middleware": "^2.0.1",
     "replace-env": "^1.0.4",
-    "sass": "^1.57.1"
+    "sass": "^1.59.3"
   },
   "resolutions": {
     "@svgr/webpack": "^6.5.0",

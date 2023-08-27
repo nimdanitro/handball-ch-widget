@@ -7,8 +7,7 @@ interface ResultsProps {
 
 function ResultsTable({ games }: ResultsProps) {
   return (
-    <div className="container">
-      <h1 className="title is-uppercase is-size-4">Letzte Resultate</h1>
+    <>
       <div className="table-container">
         <table className="table is-hoverable is-narrow is-fullwidth is-striped">
           <thead>
@@ -57,76 +56,77 @@ function ResultsTable({ games }: ResultsProps) {
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   );
 }
 
 function ResultsCards({ games }: ResultsProps) {
   return (
-    <div className="container">
-      <h1 className="title is-uppercase is-size-4">Letzte Resultate</h1>
-      {games.map((game) => (
-        <div className="card mb-1" key={game.gameId}>
-          <div className="card-content">
-            <div className="content">
-              <div className="container">
+    <>
+      {
+        games.map((game) => (
+          <div className="card mb-1" key={game.gameId}>
+            <div className="card-content">
+              <div className="content">
+                <div className="container">
+                  <div className="columns is-gapless is-size-7 is-mobile">
+                    <div className="column has-text-primary">
+                      <p>{game.leagueShort}</p>
+                    </div>
+                    <div className="column is-size-7 is-half has-text-right">
+                      <a
+                        className="has-text-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
+                      >
+                        Matchcenter
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="columns mt-1 is-gapless">
+                  <div className="column is-one-third is-size-6">
+                    {game.teamAName}
+                  </div>
+                  <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
+                    -
+                  </div>
+                  <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
+                    {game.teamBName}
+                  </div>
+                  <div className="column is-one-third is-size-6 is-hidden-tablet">
+                    {game.teamBName}
+                  </div>
+                </div>
+                <div className="columns is-gapless is-mobile">
+                  <div className="column mr-2 is-half is-size-6 has-text-right">
+                    {game.teamAScoreFT} : {game.teamBScoreFT}
+                  </div>
+                  <div className="column is-half is-size-6 has-text-left">
+                    ({game.teamAScoreHT} : {game.teamBScoreHT})
+                  </div>
+                </div>
                 <div className="columns is-gapless is-size-7 is-mobile">
-                  <div className="column has-text-primary">
-                    <p>{game.leagueShort}</p>
+                  <div className="column is-half has-text-primary">
+                    {new Intl.DateTimeFormat("de-CH", {
+                      dateStyle: "medium",
+                      timeStyle: "short",
+                    }).format(new Date(game.gameDateTime))}
                   </div>
                   <div className="column is-size-7 is-half has-text-right">
-                    <a
-                      className="has-text-primary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
-                    >
-                      Matchcenter
-                    </a>
+                    {game.venue}<br />
+                    Zuschauer: {game.spectators}
                   </div>
-                </div>
-              </div>
-              <div className="columns mt-1 is-gapless">
-                <div className="column is-one-third is-size-6">
-                  {game.teamAName}
-                </div>
-                <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
-                  -
-                </div>
-                <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  {game.teamBName}
-                </div>
-                <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  {game.teamBName}
-                </div>
-              </div>
-              <div className="columns is-gapless is-mobile">
-                <div className="column mr-2 is-half is-size-6 has-text-right">
-                  {game.teamAScoreFT} : {game.teamBScoreFT}
-                </div>
-                <div className="column is-half is-size-6 has-text-left">
-                  ({game.teamAScoreHT} : {game.teamBScoreHT})
-                </div>
-              </div>
-              <div className="columns is-gapless is-size-7 is-mobile">
-                <div className="column is-half has-text-primary">
-                  {new Intl.DateTimeFormat("de-CH", {
-                    dateStyle: "medium",
-                    timeStyle: "short",
-                  }).format(new Date(game.gameDateTime))}
-                </div>
-                <div className="column is-size-7 is-half has-text-right">
-                  {game.venue}<br />
-                  Zuschauer: {game.spectators}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ))
+        ))
       }
-    </div >
+    </>
   );
 }
 
-export { ResultsTable, ResultsCards };
+export { ResultsCards, ResultsTable };
+

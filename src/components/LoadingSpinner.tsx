@@ -1,12 +1,12 @@
-import React from 'react';
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function LoadingSpinner() {
 
     return (
-        <span className="icon icon-is-large">
-            <i className="fas fa-spinner fa-lg"></i>
-        </span>
-
+        <>
+            <FontAwesomeIcon icon={faSpinner} spin size="lg" />
+        </>
     );
 }
 

@@ -7,73 +7,69 @@ interface NextGamesProps {
 
 function NextGamesTable({ games }: NextGamesProps) {
   return (
-    <div className="container">
-      <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
-      <div className="table-container">
-        <table className="table is-hoverable is-narrow is-fullwidth is-striped">
-          <thead>
-            <tr>
-              <th>Datum</th>
-              <th>Uhrzeit</th>
-              <th>Gruppe/Cup</th>
-              <th>Heim</th>
-              <th>Gast</th>
-              <th>Halle</th>
-              <th>Details</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map((game) => (
-              <tr key={game.gameId}>
-                <td>
-                  {new Intl.DateTimeFormat("de-CH", {
-                    dateStyle: "medium",
-                  }).format(new Date(game.gameDateTime))}
-                </td>
-                <td>
-                  {new Intl.DateTimeFormat("de-CH", {
-                    hour: "numeric",
-                    minute: "numeric",
-                  }).format(new Date(game.gameDateTime))}
-                </td>
-                <td>{game.leagueLong}</td>
-                <td>{game.teamAName}</td>
-                <td>{game.teamBName}</td>
-                <td>
-                  {game.venueAddress && game.venueCity && game.venue &&
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
-                        " ",
-                        "+"
-                      )},+${game.venueCity.replaceAll(" ", "+")}`}
-                    >
-                      {game.venue}
-                    </a>}
-                </td>
-                <td>
+    <div className="table-container">
+      <table className="table is-hoverable is-narrow is-fullwidth is-striped">
+        <thead>
+          <tr>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+            <th>Gruppe/Cup</th>
+            <th>Heim</th>
+            <th>Gast</th>
+            <th>Halle</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          {games.map((game) => (
+            <tr key={game.gameId}>
+              <td>
+                {new Intl.DateTimeFormat("de-CH", {
+                  dateStyle: "medium",
+                }).format(new Date(game.gameDateTime))}
+              </td>
+              <td>
+                {new Intl.DateTimeFormat("de-CH", {
+                  hour: "numeric",
+                  minute: "numeric",
+                }).format(new Date(game.gameDateTime))}
+              </td>
+              <td>{game.leagueLong}</td>
+              <td>{game.teamAName}</td>
+              <td>{game.teamBName}</td>
+              <td>
+                {game.venueAddress && game.venueCity && game.venue &&
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
+                    href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
+                      " ",
+                      "+"
+                    )},+${game.venueCity.replaceAll(" ", "+")}`}
                   >
-                    Live-Ticker
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+                    {game.venue}
+                  </a>}
+              </td>
+              <td>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
+                >
+                  Live-Ticker
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
 
 function NextGamesCard({ games }: NextGamesProps) {
   return (
-    <div className="container">
-      <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
+    <>
       {games.map((game) => (
         <div className="card mb-1" key={game.gameId}>
           <div className="card-content">
@@ -136,8 +132,9 @@ function NextGamesCard({ games }: NextGamesProps) {
         </div>
       ))
       }
-    </div >
+    </>
   );
 }
 
 export { NextGamesCard, NextGamesTable };
+

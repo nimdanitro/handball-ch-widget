@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from "react-router-dom";
 
 function Help() {
@@ -13,7 +12,7 @@ function Help() {
                         <Link to="/verein/140675">Verwende /verein/140675 fuer einen ganzen Verein, z.B. 140675</Link>
                     </li>
                     <li>
-                        <Link to="/team/36184">Verwende /team/36184 fuer ein einzelnes Team, z.B. 36184</Link>
+                        <Link to="/team/37412">Verwende /team/37412 fuer ein einzelnes Team, z.B. 37412</Link>
                     </li>
                 </ul>
             </div >

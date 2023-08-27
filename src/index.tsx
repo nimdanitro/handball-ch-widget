@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

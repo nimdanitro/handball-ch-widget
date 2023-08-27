@@ -1,13 +1,14 @@
-import React from 'react';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import './App.scss';
-import Verein from './containers/verein';
-import Team from './containers/team';
 import Help from './components/help';
+import Team from './containers/team';
+import Verein from './containers/verein';
+
 
 import {
+  Route,
   BrowserRouter as Router,
-  Routes,
-  Route
+  Routes
 } from "react-router-dom";
 
 function App() {

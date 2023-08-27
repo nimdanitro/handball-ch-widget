@@ -66,5 +66,5 @@
     "@svgr/webpack": "^6.5.0",
     "minimatch": "^3.0.8"
   },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.6.3"
 }

@@ -66,8 +66,9 @@
     "sass": "^1.66.1"
   },
   "resolutions": {
-    "@svgr/webpack": "^6.5.0",
-    "minimatch": "^3.0.8"
+    "@svgr/webpack": "^6.5.1",
+    "minimatch": "^3.0.8",
+    "semver": "^5.7.2"
   },
   "packageManager": "yarn@3.6.3"
 }

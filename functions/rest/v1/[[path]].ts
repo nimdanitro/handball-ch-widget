@@ -2,7 +2,7 @@ export async function onRequestGet({ request, env, params }) {
     const url = new URL(request.url);
 
     const cache = caches.default;
-    const apiReq = new Request(`https://api.handball.ch${url.pathname}?${url.searchParams}`)
+    const apiReq = new Request(`https://clubapi.handball.ch${url.pathname}?${url.searchParams}`)
     
     let res = await cache.match(apiReq);
     if (!res) {

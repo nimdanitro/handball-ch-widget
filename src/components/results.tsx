@@ -1,5 +1,5 @@
 
-import { GamePlayed } from "../types/games";
+import { Game, GamePlayed } from "../types/games";
 
 interface ResultsProps {
   games: GamePlayed[];
@@ -128,5 +128,23 @@ function ResultsCards({ games }: ResultsProps) {
   );
 }
 
-export { ResultsCards, ResultsTable };
+function Results({ games }: { games: Game[] }) {
+  if (games.length === 0) return null;
+
+  return (
+    <section className="section">
+      <div className="container">
+        <h1 className="title is-uppercase is-size-4">Letzte Resultate</h1>
+        <div className="is-hidden-touch">
+          <ResultsTable games={games} />
+        </div>
+        <div className="is-hidden-desktop">
+          <ResultsCards games={games} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export { Results, ResultsCards, ResultsTable };
 

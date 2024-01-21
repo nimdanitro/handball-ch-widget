@@ -26,8 +26,8 @@ function Verein() {
     )
       .then((res) => res.json())
       .then((data) => {
-        setGamesPlanned(data.filter((g: Game) => g.gameStatusId === 1).sort((a: Game, b: Game) => new Date(a.gameDateTime) < new Date(b.gameDateTime)).slice(0, numNext))
-        setGamesPlayed(data.filter((g: Game) => g.gameStatusId === 2).sort((a: Game, b: Game) => new Date(a.gameDateTime) < new Date(b.gameDateTime)).slice(0, numResults))
+        setGamesPlanned(data.filter((g: Game) => g.gameStatusId === 1).sort((a: Game, b: Game) => Number(b.gameDateTime) - Number(a.gameDateTime)).slice(0, numNext))
+        setGamesPlayed(data.filter((g: Game) => g.gameStatusId === 2).sort((a: Game, b: Game) => Number(b.gameDateTime) - Number(a.gameDateTime)).slice(0, numResults))
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
@@ -49,5 +49,5 @@ function Verein() {
     </>
   );
 }
-
+//2023-09-09T15:45:00
 export default Verein;

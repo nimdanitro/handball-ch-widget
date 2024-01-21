@@ -20,6 +20,34 @@ export interface GamePlayed {
     venueCity: string,
 };
 
+export interface Game {
+    gameDateTime: Date,
+    gameId: number,
+    gameNr: number,
+    gameStatus: string,
+    gameStatusId: number,
+    gameTypeLong: string,
+    gameTypeShort: string,
+    groupCupText: string,
+    groupID: number,
+    leagueLong: string,
+    leagueShort: string,
+    roundNr: number,
+    spectators: number,
+    teamAId: number,
+    teamAName: string,
+    teamAScoreFT: number,
+    teamAScoreHT: number,
+    teamBId: number,
+    teamBName: string,
+    teamBScoreFT: number,
+    teamBScoreHT: number,
+    venue: string,
+    venueAddress: string,
+    venueCity: string,
+    venueZip: number,
+};
+
 
 export interface GamesPlanned {
     gameId: number,

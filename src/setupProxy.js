@@ -4,10 +4,10 @@ module.exports = function (app) {
   app.use(
     '/rest',
     createProxyMiddleware({
-      target: 'https://api.handball.ch',
-      auth: process.env.REACT_APP_API_AUTH_TOKEN,
-      logLevel: 'debug',
+      target: 'https://clubapi-test.handball.ch',
+      logLevel: 'info',
       changeOrigin: true,
+      auth: atob(process.env.REACT_APP_API_AUTH_TOKEN),
     })
   );
 };

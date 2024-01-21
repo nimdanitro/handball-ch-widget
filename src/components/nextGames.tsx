@@ -1,5 +1,5 @@
 
-import { GamesPlanned } from "../types/games";
+import { Game, GamesPlanned } from "../types/games";
 
 interface NextGamesProps {
   games: GamesPlanned[];
@@ -136,5 +136,26 @@ function NextGamesCard({ games }: NextGamesProps) {
   );
 }
 
-export { NextGamesCard, NextGamesTable };
+
+function NextGames({ games }: { games: Game[] }) {
+
+  if (games.length === 0) return null;
+
+  return (
+    <section className="section">
+      <div className="container">
+        <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
+        <div className="is-hidden-touch">
+          <NextGamesTable games={games} />
+        </div>
+        <div className="is-hidden-desktop">
+          <NextGamesCard games={games} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+export { NextGames, NextGamesCard, NextGamesTable };
 

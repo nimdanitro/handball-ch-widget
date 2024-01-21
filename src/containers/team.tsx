@@ -10,10 +10,10 @@ import LoadingSpinner from "../components/LoadingSpinner";
 
 function Team() {
   let { id } = useParams();
-  const [searchParams] = useSearchParams();
 
-  let numResults = searchParams.get("results") || 10;
-  let numNext = searchParams.get("next") || 10;
+  const [searchParams] = useSearchParams();
+  let numResults: number = Number(searchParams.get("results")) || 10;
+  let numNext: number = Number(searchParams.get("next")) || 10;
 
   const [gamesPlanned, setGamesPlanned] = useState<Game[]>([]);
   const [gamesPlayed, setGamesPlayed] = useState<Game[]>([]);
@@ -24,9 +24,9 @@ function Team() {
       `/rest/v1/teams/${id}/games`
     )
       .then((res) => res.json())
-      .then((data) => {
-        setGamesPlanned(data.filter((g: Game) => g.gameStatusId === 1).sort((a: Game, b: Game) => new Date(a.gameDateTime) < new Date(b.gameDateTime)).slice(0, numNext))
-        setGamesPlayed(data.filter((g: Game) => g.gameStatusId === 2).sort((a: Game, b: Game) => new Date(a.gameDateTime) < new Date(b.gameDateTime)).slice(0, numResults))
+      .then((data: Game[]) => {
+        setGamesPlanned(data.filter((g: Game) => g.gameStatusId === 1).sort((a: Game, b: Game) => new Date(a.gameDateTime).getTime() - new Date(b.gameDateTime).getTime()).slice(0, numNext))
+        setGamesPlayed(data.filter((g: Game) => g.gameStatusId === 2).sort((a: Game, b: Game) => new Date(b.gameDateTime).getTime() - new Date(a.gameDateTime).getTime()).slice(0, numResults))
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));

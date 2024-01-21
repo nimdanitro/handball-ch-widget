@@ -7,9 +7,7 @@ module.exports = function (app) {
       target: 'https://clubapi-test.handball.ch',
       logLevel: 'info',
       changeOrigin: true,
-      on: {
-        proxyReq: (proxyReq, req, res) => proxyReq.setHeader('Authorization', `Basic ${process.env.REACT_APP_API_AUTH_TOKEN}`),
-      }
+      auth: atob(process.env.REACT_APP_API_AUTH_TOKEN),
     })
   );
 };

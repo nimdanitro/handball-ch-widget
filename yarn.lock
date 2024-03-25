@@ -3234,14 +3234,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.21":
-  version: 18.2.21
-  resolution: "@types/react@npm:18.2.21"
+"@types/react@npm:^18.2.70":
+  version: 18.2.70
+  resolution: "@types/react@npm:18.2.70"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: ffed203bfe7aad772b8286f7953305c9181ac3a8f27d3f5400fbbc2a8e27ca8e5bbff818ee014f39ca0d19d2b3bb154e5bdbec7e232c6f80b59069375aa78349
+  checksum: 4d1160ad2449ce5e96aa795f24f9e3902975cd59e6ce3c79eb674acb1262a54cdb0bc9c9b0aeb858da24e20148a09ec1822c8ed12f70c1c87b779ac2baf72ebd
   languageName: node
   linkType: hard
 
@@ -3679,7 +3679,7 @@ __metadata:
     "@testing-library/user-event": ^14.4.3
     "@types/jest": ^29.5.4
     "@types/node": ^20.10.0
-    "@types/react": ^18.2.21
+    "@types/react": ^18.2.70
     "@types/react-dom": ^18.2.18
     bulma: ^0.9.4
     eslint: ^8.54.0

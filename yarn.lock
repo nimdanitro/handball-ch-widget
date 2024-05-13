@@ -3687,7 +3687,7 @@ __metadata:
     "@types/node": ^20.10.0
     "@types/react": ^18.2.78
     "@types/react-dom": ^18.2.25
-    bulma: ^0.9.4
+    bulma: ^1.0.0
     eslint: ^8.54.0
     eslint-config-react-app: ^7.0.1
     http-proxy-middleware: ^2.0.1
@@ -4492,10 +4492,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bulma@npm:^0.9.4":
-  version: 0.9.4
-  resolution: "bulma@npm:0.9.4"
-  checksum: bc0ab8c203deb0ae200fab5b38547ad4bc8ed1e3abcf6f4ac8a2229af46540419bbcb78c9d2e80f3ddda8825d64fa186ed8775674656cdcabe5544be4d0f3d85
+"bulma@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "bulma@npm:1.0.0"
+  dependencies:
+    sass: ^1.71.1
+  checksum: 8999b476dbc0ec39633038dfbc5242ec1f328848c2e4bcb2c5837686fb83ca43d99e40b019784e78981c4a48e8e6e3967b5d4282549fdfec8ef7e47587a76017
   languageName: node
   linkType: hard
 
@@ -11475,6 +11477,19 @@ __metadata:
   bin:
     sass: sass.js
   checksum: 74fc11d0fcd5e16c5331b57dd59865705a299c64e89f2b99646869caeb011dc8d0b6144a6c74a90c264e9ef70654207dbf44fc9b7e3393f8bd14809b904c8a52
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.71.1":
+  version: 1.77.1
+  resolution: "sass@npm:1.77.1"
+  dependencies:
+    chokidar: ">=3.0.0 <4.0.0"
+    immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
+  bin:
+    sass: sass.js
+  checksum: 97976bcb781bf1784662a4a690352dc6d87529fea9de0c9c6ce21994765067da801ffd54fa5c3891735e8ef9c30065eb61a02ca2eb27ed878e9606542e827d9a
   languageName: node
   linkType: hard
 

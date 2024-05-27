@@ -3705,7 +3705,7 @@ __metadata:
     react-router-dom: ^6.23.1
     react-scripts: 5.0.1
     replace-env: ^1.0.4
-    sass: ^1.66.1
+    sass: ^1.77.2
     typescript: ^5.4.5
     web-vitals: ^3.5.2
   languageName: unknown
@@ -11488,16 +11488,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.66.1":
-  version: 1.66.1
-  resolution: "sass@npm:1.66.1"
+"sass@npm:^1.77.2":
+  version: 1.77.2
+  resolution: "sass@npm:1.77.2"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 74fc11d0fcd5e16c5331b57dd59865705a299c64e89f2b99646869caeb011dc8d0b6144a6c74a90c264e9ef70654207dbf44fc9b7e3393f8bd14809b904c8a52
+  checksum: fd75b1f255a30ecd4ee79fa020830d7bf426dd15de2f47cf9610130707dc2a029da3677ca0a6c89e8d4626b0a2816456bb7fb706cb518cfbf2e7c0038ef7a4b8
   languageName: node
   linkType: hard
 

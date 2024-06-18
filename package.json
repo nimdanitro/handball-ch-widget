@@ -5,11 +5,11 @@
   "license": "MPL-2.0",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@svgr/webpack": "^8.1.0",
     "react": "^18.3.1",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "typescript": "^5.4.5",
@@ -50,25 +50,26 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240529.0",
-    "@testing-library/jest-dom": "^6.4.5",
+    "@cloudflare/workers-types": "^4.20240614.0",
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.12",
+    "@types/node": "^20.14.5",
     "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.2.25",
+    "@types/react-dom": "^18.3.0",
     "bulma": "^0.9.4",
-    "eslint": "^8.54.0",
+    "eslint": "^8.57.0",
     "eslint-config-react-app": "^7.0.1",
     "http-proxy-middleware": "^3.0.0",
     "replace-env": "^1.0.4",
-    "sass": "^1.77.4"
+    "sass": "^1.77.6"
   },
   "resolutions": {
     "@svgr/webpack": "^6.5.1",
     "minimatch": "^3.0.8",
     "semver": "^5.7.2"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.3.0"
 }

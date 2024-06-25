@@ -50,7 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240614.0",
+    "@cloudflare/workers-types": "^4.20240620.0",
     "@testing-library/dom": "^10.2.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",

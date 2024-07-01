@@ -3715,7 +3715,7 @@ __metadata:
     replace-env: "npm:^1.0.4"
     sass: "npm:^1.77.6"
     typescript: "npm:^5.5.2"
-    web-vitals: "npm:^3.5.2"
+    web-vitals: "npm:^4.2.1"
   languageName: unknown
   linkType: soft
 
@@ -12877,10 +12877,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^3.5.2":
-  version: 3.5.2
-  resolution: "web-vitals@npm:3.5.2"
-  checksum: 10/59c5d7775c32977eb9156d186113f4de66c235cfea7a113d2f430ef25db25a5efe1980d2ba466f7ceefc7b1a3847764933dc1567b6d9b8f340d12e75209e3f79
+"web-vitals@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "web-vitals@npm:4.2.1"
+  checksum: 10/a555c9814d991a60c703c69d423a5586e91d22cf58cc5b6ecd572b24a7d028a3dbfa478970066f13e00e5ad0c2caae405fe12fc3c7eb6ffec8ad0e2df2f3990f
   languageName: node
   linkType: hard
 

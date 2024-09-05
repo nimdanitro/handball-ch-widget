@@ -50,13 +50,13 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240821.1",
+    "@cloudflare/workers-types": "^4.20240903.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
-    "@types/node": "^22.5.2",
+    "@types/node": "^22.5.3",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "bulma": "^0.9.4",
@@ -64,7 +64,7 @@
     "eslint-config-react-app": "^7.0.1",
     "http-proxy-middleware": "^3.0.2",
     "replace-env": "^1.0.4",
-    "sass": "^1.77.8"
+    "sass": "^1.78.0"
   },
   "resolutions": {
     "@svgr/webpack": "^6.5.1",

@@ -3037,12 +3037,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.7.3":
-  version: 22.7.3
-  resolution: "@types/node@npm:22.7.3"
+"@types/node@npm:^22.7.4":
+  version: 22.7.4
+  resolution: "@types/node@npm:22.7.4"
   dependencies:
     undici-types: "npm:~6.19.2"
-  checksum: 10/f5e450c8c0588506698c6dd5fb9617cc516e2bd35417d853c96378533bc45b69219715ecc5d78667a194387647e69a10852b348b52e2d45f41ec75985cd3ef88
+  checksum: 10/19ddab80c4eba2253c855ed67c9bbc47417183049d01e59010a738bd80d47338bab79fd1f44ae51516bd63a1db4bf21ddb38b16bf6401a2e93252068ec52e88b
   languageName: node
   linkType: hard
 
@@ -3100,13 +3100,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.3.9":
-  version: 18.3.9
-  resolution: "@types/react@npm:18.3.9"
+"@types/react@npm:^18.3.10":
+  version: 18.3.10
+  resolution: "@types/react@npm:18.3.10"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10/d1321e874e6523b0a944d4ce514c071cbe44501b04591e17c0b265c9a03fb3e4486337ae1bec74541b72a41f34beef157342205dd07b31d116f4d06fa39cf32f
+  checksum: 10/cdc946f15fcad62387e6485a2bbef3e45609708fd81e3ce30b03580077bb8a8a1bd0d19858d8602b33c3921bbb8907ddbc9411fd25294a2c2e944907dad8dd67
   languageName: node
   linkType: hard
 
@@ -3538,8 +3538,8 @@ __metadata:
     "@testing-library/react": "npm:^16.0.1"
     "@testing-library/user-event": "npm:^14.5.2"
     "@types/jest": "npm:^29.5.13"
-    "@types/node": "npm:^22.7.3"
-    "@types/react": "npm:^18.3.9"
+    "@types/node": "npm:^22.7.4"
+    "@types/react": "npm:^18.3.10"
     "@types/react-dom": "npm:^18.3.0"
     bulma: "npm:^0.9.4"
     eslint: "npm:^8.57.1"

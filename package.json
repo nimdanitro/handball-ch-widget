@@ -64,7 +64,7 @@
     "eslint-config-react-app": "^7.0.1",
     "http-proxy-middleware": "^3.0.3",
     "replace-env": "^1.0.4",
-    "sass": "^1.80.7"
+    "sass": "^1.81.0"
   },
   "resolutions": {
     "@svgr/webpack": "^6.5.1",

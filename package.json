@@ -69,7 +69,9 @@
   "resolutions": {
     "@svgr/webpack": "^6.5.1",
     "minimatch": "^3.0.8",
-    "semver": "^5.7.2"
+    "semver": "^5.7.2",
+    "express": "4.21.2",
+    "webpack-dev-server": "5.2.0"
   },
   "packageManager": "yarn@4.6.0"
 }

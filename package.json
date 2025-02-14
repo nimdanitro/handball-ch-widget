@@ -71,7 +71,8 @@
     "minimatch": "^3.1.2",
     "semver": "^5.7.2",
     "webpack-dev-server": "5.2.0",
-    "serialize-javascript": "6.0.2"
+    "serialize-javascript": "6.0.2",
+    "postcss": "8.5.2"
   },
   "packageManager": "yarn@4.6.0"
 }

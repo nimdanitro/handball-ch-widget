@@ -62,7 +62,7 @@
     "bulma": "^0.9.4",
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
-    "http-proxy-middleware": "^3.0.3",
+    "http-proxy-middleware": "^3.0.5",
     "replace-env": "^1.0.4",
     "sass": "^1.85.0"
   },

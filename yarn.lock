@@ -1663,10 +1663,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20250416.0":
-  version: 4.20250416.0
-  resolution: "@cloudflare/workers-types@npm:4.20250416.0"
-  checksum: 10/ba8ea7e1728d87b201c36f2a4c41bff1f01b935b3214ebbdc2ca703db3f3ed1920bac6863c9fbadac5347345f89902a6466ff9269dfb26d75bae5daaaf004c20
+"@cloudflare/workers-types@npm:^4.20250422.0":
+  version: 4.20250422.0
+  resolution: "@cloudflare/workers-types@npm:4.20250422.0"
+  checksum: 10/edaa8788f9f4ad5dc0407bb993016e0080f1642775a3db827799f42e32edefc5d504fa0ed137b986cb53b75e709ddf25dba51af59a8907d18c5419b4ed1c8199
   languageName: node
   linkType: hard
 
@@ -3684,7 +3684,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250416.0"
+    "@cloudflare/workers-types": "npm:^4.20250422.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.7.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.7.2"
     "@fortawesome/react-fontawesome": "npm:^0.2.2"
@@ -3706,7 +3706,7 @@ __metadata:
     react-router-dom: "npm:^6.29.0"
     react-scripts: "npm:5.0.1"
     replace-env: "npm:^1.0.4"
-    sass: "npm:^1.86.3"
+    sass: "npm:^1.87.0"
     typescript: "npm:^5.7.3"
     web-vitals: "npm:^4.2.4"
   languageName: unknown
@@ -11998,9 +11998,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.86.3":
-  version: 1.86.3
-  resolution: "sass@npm:1.86.3"
+"sass@npm:^1.87.0":
+  version: 1.87.0
+  resolution: "sass@npm:1.87.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -12011,7 +12011,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10/97c1c06aa6eab34b732fc1ce0c6816c0d63c4b68e1f5927981fdeba6d5b69765c318e455db2111f4ee616ae0b5015cc5c25f05db68ad03a052fd043ec97624c1
+  checksum: 10/43c7d9567baf08619edf46b1419882c5459d456968bb7f220eb92d2cb9c344218dbb93f00c4e76624cfd4f862531d37be731845da6a5b538cf10516746908297
   languageName: node
   linkType: hard
 

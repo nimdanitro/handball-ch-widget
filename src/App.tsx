@@ -9,7 +9,7 @@ import {
   Route,
   BrowserRouter as Router,
   Routes
-} from "react-router-dom";
+} from "react-router";
 
 function App() {
 

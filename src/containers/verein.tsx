@@ -5,7 +5,7 @@ import { Game } from "../types/games";
 import { NextGames } from "../components/nextGames";
 import { Results } from "../components/results";
 
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 

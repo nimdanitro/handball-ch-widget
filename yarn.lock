@@ -1720,10 +1720,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20250520.0":
-  version: 4.20250520.0
-  resolution: "@cloudflare/workers-types@npm:4.20250520.0"
-  checksum: 10/ccaa8375e54eb104d34a14d1adc6cb3e176e524cf1c515e75bd9c14775c6f6c5903660fcc472760e2f2836fcc46389878d9ac75a2b110806eb5af4150182ed51
+"@cloudflare/workers-types@npm:^4.20250521.0":
+  version: 4.20250521.0
+  resolution: "@cloudflare/workers-types@npm:4.20250521.0"
+  checksum: 10/e7c90f1b41607800485b7a8f62dfaac72a8233f32bb6b708681d466bf688e0d76358aafb2019d184a0847fccfd06291b5255ea06eb75a91057eb1db4c68309d7
   languageName: node
   linkType: hard
 
@@ -3244,12 +3244,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.15.20":
-  version: 22.15.20
-  resolution: "@types/node@npm:22.15.20"
+"@types/node@npm:^22.15.21":
+  version: 22.15.21
+  resolution: "@types/node@npm:22.15.21"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/75f4c0787b643db602c260e1e0d73c75fbb59337d384decec0d64e0e8e4398bc325a6507ccf16c7751cbb8a70ac605cbf850153149b0823a41f8a1c34b072991
+  checksum: 10/cb4189587cca445bfb8166c0ed39f9344d743f37f3da892f2999a99bbabda45dc773237e61ecb7d1dc83dd95718cb1b5715b0be5dd7953565b19019e36a7cf39
   languageName: node
   linkType: hard
 
@@ -3290,12 +3290,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.1.4":
-  version: 19.1.4
-  resolution: "@types/react@npm:19.1.4"
+"@types/react@npm:^19.1.5":
+  version: 19.1.5
+  resolution: "@types/react@npm:19.1.5"
   dependencies:
     csstype: "npm:^3.0.2"
-  checksum: 10/b8744e03bc3f7d4d686681ab039e0b2454fbb2110436b8b7f6ee9e6c5f8f8552231c6c273b908f69b3eae1745aeb7b075949bb3983ba8b36c3b0c2888e22726c
+  checksum: 10/ea007c6c3a7afc42421d2cc260446de9e949513cb1261e0e5cf856108afe6e8d53ed51dc26c522a364e4927450092deea68b0423c68f3a22c26dae3fac1363a5
   languageName: node
   linkType: hard
 
@@ -3717,7 +3717,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250520.0"
+    "@cloudflare/workers-types": "npm:^4.20250521.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.7.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.7.2"
     "@fortawesome/react-fontawesome": "npm:^0.2.2"
@@ -3727,8 +3727,8 @@ __metadata:
     "@testing-library/react": "npm:^16.3.0"
     "@testing-library/user-event": "npm:^14.6.1"
     "@types/jest": "npm:^29.5.14"
-    "@types/node": "npm:^22.15.20"
-    "@types/react": "npm:^19.1.4"
+    "@types/node": "npm:^22.15.21"
+    "@types/react": "npm:^19.1.5"
     "@types/react-dom": "npm:^19.1.5"
     bulma: "npm:^0.9.4"
     eslint: "npm:^8.57.1"

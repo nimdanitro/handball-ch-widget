@@ -50,21 +50,21 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250605.0",
+    "@cloudflare/workers-types": "^4.20250607.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.15.30",
-    "@types/react": "^19.1.6",
+    "@types/react": "^19.1.7",
     "@types/react-dom": "^19.1.6",
     "bulma": "^0.9.4",
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
     "http-proxy-middleware": "^3.0.5",
     "replace-env": "^1.0.4",
-    "sass": "^1.89.1"
+    "sass": "^1.89.2"
   },
   "resolutions": {
     "@svgr/webpack": "^6.5.1",

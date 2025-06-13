@@ -1720,10 +1720,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20250605.0":
-  version: 4.20250605.0
-  resolution: "@cloudflare/workers-types@npm:4.20250605.0"
-  checksum: 10/88d1aa65be80ae833b05a845fa1edd24cb54fa7cd8ebbffa913a6bca14a9af56cbfdbcf2da2c87d799e40b6ce7a5aa900118c786dc86c876f478935f1b13a70a
+"@cloudflare/workers-types@npm:^4.20250607.0":
+  version: 4.20250607.0
+  resolution: "@cloudflare/workers-types@npm:4.20250607.0"
+  checksum: 10/617a639119cdd608f25f2ba0d3ccf8cacd2e541d5cc0a1b6fe863e570805f2a2644b12265effd0159ee35ce29a50dff1df5c4df813d9a8c0aa028a33fa8c8818
   languageName: node
   linkType: hard
 
@@ -3290,12 +3290,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.1.6":
-  version: 19.1.6
-  resolution: "@types/react@npm:19.1.6"
+"@types/react@npm:^19.1.7":
+  version: 19.1.7
+  resolution: "@types/react@npm:19.1.7"
   dependencies:
     csstype: "npm:^3.0.2"
-  checksum: 10/722a8efb36dedaf5cfe226287214df0982d612ff33ebf005dbbb646279647e5987da661f2d9fe6b8a4516d3b29dd6cb3a708641265861251abb682e8e90540cf
+  checksum: 10/a2bd9aea233e9b8b1eb27192ee5cefd5a236b03ef9fce2e5ea8ec612cf4735d38fa443a0a1d0abea61dd166aad205fb8d799055dacfd2f0759da6f59f046fc55
   languageName: node
   linkType: hard
 
@@ -3717,7 +3717,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250605.0"
+    "@cloudflare/workers-types": "npm:^4.20250607.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.7.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.7.2"
     "@fortawesome/react-fontawesome": "npm:^0.2.2"
@@ -3728,7 +3728,7 @@ __metadata:
     "@testing-library/user-event": "npm:^14.6.1"
     "@types/jest": "npm:^29.5.14"
     "@types/node": "npm:^22.15.30"
-    "@types/react": "npm:^19.1.6"
+    "@types/react": "npm:^19.1.7"
     "@types/react-dom": "npm:^19.1.6"
     bulma: "npm:^0.9.4"
     eslint: "npm:^8.57.1"
@@ -3739,7 +3739,7 @@ __metadata:
     react-router: "npm:^7.6.2"
     react-scripts: "npm:5.0.1"
     replace-env: "npm:^1.0.4"
-    sass: "npm:^1.89.1"
+    sass: "npm:^1.89.2"
     typescript: "npm:^5.8.3"
     web-vitals: "npm:^5.0.2"
   languageName: unknown
@@ -12002,9 +12002,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.89.1":
-  version: 1.89.1
-  resolution: "sass@npm:1.89.1"
+"sass@npm:^1.89.2":
+  version: 1.89.2
+  resolution: "sass@npm:1.89.2"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -12015,7 +12015,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10/2af4a777cb6f79b83a38a35bfbb85e54cc89c1af2f0549655d87ae262a1136c99369ff885a98ece0dd8b61aaeeb0204b1b2ba3fe831811045b3be8c958b42ef6
+  checksum: 10/7e9044f3c88b23580731de321cdf4c53fe6139395e2241fce7ff353c60a7cc8fe36b5eedc9701e092d2975f2c124e886379bb9ceab27b5ed053548f202b992b3
   languageName: node
   linkType: hard
 

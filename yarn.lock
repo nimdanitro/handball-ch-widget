@@ -1720,10 +1720,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20250614.0":
-  version: 4.20250614.0
-  resolution: "@cloudflare/workers-types@npm:4.20250614.0"
-  checksum: 10/a50094c276fa11effd7ab33279ae788490f8762b2bfea7a7328ce9c0f859e8a74340175648fb60624ae30506f8a2b45b06417187ca459706d21318a8835a8e59
+"@cloudflare/workers-types@npm:^4.20250618.0":
+  version: 4.20250618.0
+  resolution: "@cloudflare/workers-types@npm:4.20250618.0"
+  checksum: 10/2bb22332d8b36b76c1a4a84dcb4a29841f80b774ba273bff31e8e2e710ba734e8f95fd60e3c303cbb02e480b74325c59b01ac494cb5a84268b027cf439a629d4
   languageName: node
   linkType: hard
 
@@ -3717,7 +3717,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250614.0"
+    "@cloudflare/workers-types": "npm:^4.20250618.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.7.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.7.2"
     "@fortawesome/react-fontawesome": "npm:^0.2.2"

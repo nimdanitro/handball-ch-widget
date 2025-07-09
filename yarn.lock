@@ -1738,10 +1738,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20250708.0":
-  version: 4.20250708.0
-  resolution: "@cloudflare/workers-types@npm:4.20250708.0"
-  checksum: 10/c95bf8ea4f3ea2ca21398fed2b35a3b8e968939588d2367e498ff7fa2bf6544b071bce7b3fca596405165fcce9a136565d0e509732348349b0f7692d5a749d55
+"@cloudflare/workers-types@npm:^4.20250709.0":
+  version: 4.20250709.0
+  resolution: "@cloudflare/workers-types@npm:4.20250709.0"
+  checksum: 10/9a67268ccdc41673640352d8c029e7522c9a03cc2fff6ad117f853d59d2d42e30e80f38560d3570f991db1a916553fa28b057e3adfa17d57464f17e97bde6794
   languageName: node
   linkType: hard
 
@@ -3287,12 +3287,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.0.11":
-  version: 24.0.11
-  resolution: "@types/node@npm:24.0.11"
+"@types/node@npm:^24.0.12":
+  version: 24.0.12
+  resolution: "@types/node@npm:24.0.12"
   dependencies:
     undici-types: "npm:~7.8.0"
-  checksum: 10/cdef579ab2933fabd7d19ba8a05e0ff1f95e95dc2f68b7e4660a1bcff67799a3f537e436d27392138e7a46f8f9bc6411f3566e0ecded50e66d9e3dab854694f4
+  checksum: 10/4dbcd278ce2e0f4516376d1cb2c146ac68d45d4f97c406cc58fac7e63c49545eb97b3acb0d40dbf0d15893158981081da6163c01a16a265dfc3abb34d032f6c1
   languageName: node
   linkType: hard
 
@@ -3769,7 +3769,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250708.0"
+    "@cloudflare/workers-types": "npm:^4.20250709.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.7.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.7.2"
     "@fortawesome/react-fontawesome": "npm:^0.2.2"
@@ -3779,7 +3779,7 @@ __metadata:
     "@testing-library/react": "npm:^16.3.0"
     "@testing-library/user-event": "npm:^14.6.1"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.11"
+    "@types/node": "npm:^24.0.12"
     "@types/react": "npm:^19.1.8"
     "@types/react-dom": "npm:^19.1.6"
     bulma: "npm:^0.9.4"

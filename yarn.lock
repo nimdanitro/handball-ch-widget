@@ -1738,10 +1738,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20250806.0":
-  version: 4.20250806.0
-  resolution: "@cloudflare/workers-types@npm:4.20250806.0"
-  checksum: 10/18a0cb7ad8427ad28a24e2a7a2da3afbcc3f7578689d17be6d985d3cacd4e851c0097cdaa8c007c41e08b06f3919a1d9ac238b8a0cc55b91dad27720e34f1a1d
+"@cloudflare/workers-types@npm:^4.20250813.0":
+  version: 4.20250813.0
+  resolution: "@cloudflare/workers-types@npm:4.20250813.0"
+  checksum: 10/adc8834db22848a7cf92fafd172951ce03d37005dcf9348aeebe566ba2576b792808a330c60928508d5f326394bdc82e1726d143a67f1f8016e50561684ce71d
   languageName: node
   linkType: hard
 
@@ -2989,18 +2989,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.6.4":
-  version: 6.6.4
-  resolution: "@testing-library/jest-dom@npm:6.6.4"
+"@testing-library/jest-dom@npm:^6.7.0":
+  version: 6.7.0
+  resolution: "@testing-library/jest-dom@npm:6.7.0"
   dependencies:
     "@adobe/css-tools": "npm:^4.4.0"
     aria-query: "npm:^5.0.0"
     css.escape: "npm:^1.5.1"
     dom-accessibility-api: "npm:^0.6.3"
-    lodash: "npm:^4.17.21"
     picocolors: "npm:^1.1.1"
     redent: "npm:^3.0.0"
-  checksum: 10/5e67112c789f884fb75b279c2cddfdd0995a012a7847a03c474e4134f0d213934ee70c97433bca26b45e3a5ffa56faafe6499c8e57841179c4f2bd80eef429cd
+  checksum: 10/c994f028b6f2d49c18c9fd6050af7f3316fb0afd03d0ba15d03b177f0f046a0308302dd52ab289fad8794e16a88e4d724b5f23caa007cf343a4b5e435efb84d9
   languageName: node
   linkType: hard
 
@@ -3287,12 +3286,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.2.0":
-  version: 24.2.0
-  resolution: "@types/node@npm:24.2.0"
+"@types/node@npm:^24.2.1":
+  version: 24.2.1
+  resolution: "@types/node@npm:24.2.1"
   dependencies:
     undici-types: "npm:~7.10.0"
-  checksum: 10/b81501e05f15df28102baac60afbc82d30009ee0bf4dee41b7fa326ec5789d0d83dd28c418e04dc30a9513ab6afb9813edc75042aef751336d8dcfefe099709c
+  checksum: 10/cdfa7b30b2f1de71c4cf0b66ee05c71c8f39819a817bb78b4ba10545d4ca1ea9988a3614885806e90401e92938aa08e08489b1b920ba5c1406a028295019734f
   languageName: node
   linkType: hard
 
@@ -3769,17 +3768,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250806.0"
+    "@cloudflare/workers-types": "npm:^4.20250813.0"
     "@fortawesome/fontawesome-svg-core": "npm:^7.0.0"
     "@fortawesome/free-solid-svg-icons": "npm:^7.0.0"
     "@fortawesome/react-fontawesome": "npm:^0.2.3"
     "@svgr/webpack": "npm:^8.1.0"
     "@testing-library/dom": "npm:^10.4.1"
-    "@testing-library/jest-dom": "npm:^6.6.4"
+    "@testing-library/jest-dom": "npm:^6.7.0"
     "@testing-library/react": "npm:^16.3.0"
     "@testing-library/user-event": "npm:^14.6.1"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.2.0"
+    "@types/node": "npm:^24.2.1"
     "@types/react": "npm:^19.1.8"
     "@types/react-dom": "npm:^19.1.6"
     bulma: "npm:^0.9.4"

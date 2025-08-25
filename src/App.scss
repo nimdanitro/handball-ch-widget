@@ -8,7 +8,7 @@ $black: hsl(0, 0%, 0%) !default;
 $family-serif: "Exo", serif;
 $family-primary: $family-serif;
 
-@import "~bulma/sass/utilities/initial-variables.sass";
+@import "bulma/sass/utilities/initial-variables.sass";
 
 $primary: rgba(255, 209, 0, 1);
 $background-color: $black;
@@ -46,18 +46,18 @@ $table-cell-border-width: 0 0 0;
 
 $section-padding: 2rem 0.5rem;
 
-@import "~bulma/sass/utilities/_all.sass";
-@import "~bulma/sass/base/_all.sass";
-@import "~bulma/sass/elements/_all.sass";
-@import "~bulma/sass/elements/box.sass";
-@import "~bulma/sass/elements/container.sass";
-@import "~bulma/sass/elements/content.sass";
-@import "~bulma/sass/elements/title.sass";
-@import "~bulma/sass/elements/icon.sass";
-@import "~bulma/sass/elements/table.sass";
-@import "~bulma/sass/layout/section.sass";
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/elements/_all.sass";
+@import "bulma/sass/elements/box.sass";
+@import "bulma/sass/elements/container.sass";
+@import "bulma/sass/elements/content.sass";
+@import "bulma/sass/elements/title.sass";
+@import "bulma/sass/elements/icon.sass";
+@import "bulma/sass/elements/table.sass";
+@import "bulma/sass/layout/section.sass";
 
-@import "~bulma/sass/components/_all.sass";
-@import "~bulma/sass/components/card.sass";
-@import "~bulma/sass/helpers/_all.sass";
-@import "~bulma/sass/grid/columns.sass";
+@import "bulma/sass/components/_all.sass";
+@import "bulma/sass/components/card.sass";
+@import "bulma/sass/helpers/_all.sass";
+@import "bulma/sass/grid/columns.sass";

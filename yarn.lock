@@ -2916,10 +2916,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20251210.0":
-  version: 4.20251210.0
-  resolution: "@cloudflare/workers-types@npm:4.20251210.0"
-  checksum: 10/fc7069fc4ab861752bd2645c87152eab3a7aa1ab5768274aea232dcd7afc236a66b1878a12d06767ffd0c984635cb75aeda18756a9a0695ceaae9289a19261c2
+"@cloudflare/workers-types@npm:^4.20251211.0":
+  version: 4.20251211.0
+  resolution: "@cloudflare/workers-types@npm:4.20251211.0"
+  checksum: 10/62f6a6808aac834ddb80af660b936bad97e1ed24c551e63bb9a70a7d229f0b4d3320ae970a4af569003389216f5886036cf502eddba6337e77ad1ed80c338740
   languageName: node
   linkType: hard
 
@@ -5479,7 +5479,7 @@ __metadata:
   resolution: "HandballCH-widget@workspace:."
   dependencies:
     "@biomejs/biome": "npm:^2.3.8"
-    "@cloudflare/workers-types": "npm:^4.20251210.0"
+    "@cloudflare/workers-types": "npm:^4.20251211.0"
     "@fortawesome/fontawesome-svg-core": "npm:^7.1.0"
     "@fortawesome/free-solid-svg-icons": "npm:^7.1.0"
     "@fortawesome/react-fontawesome": "npm:^3.1.1"
@@ -5504,7 +5504,7 @@ __metadata:
     react-dom: "npm:^19.2.1"
     react-router: "npm:^7.10.1"
     replace-env: "npm:^1.0.4"
-    sass: "npm:^1.95.1"
+    sass: "npm:^1.96.0"
     ts-jest: "npm:^29.4.6"
     typescript: "npm:^5.9.3"
     vite: "npm:^7.2.3"
@@ -10631,9 +10631,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.95.1":
-  version: 1.95.1
-  resolution: "sass@npm:1.95.1"
+"sass@npm:^1.96.0":
+  version: 1.96.0
+  resolution: "sass@npm:1.96.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -10644,7 +10644,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10/548520f8e341d45cde8bcdce5bbe442a874ec4daef658f8caf6fb3ca62f6aacba61411e76b8a26efb25b6d48cfa23af10684bde11010780f68adff43594851f8
+  checksum: 10/be4c0030f8f973fff5ee10bc4fdf5026a63a66a06bc540c9efffb91bead7b22c13174af765196cb73d2f175dd5f4f879afd027312bf600158c7ced6c2de1c1aa
   languageName: node
   linkType: hard
 

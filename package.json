@@ -9,7 +9,7 @@
 		"@fortawesome/react-fontawesome": "^3.1.1",
 		"@svgr/webpack": "^8.1.0",
 		"react": "^19.2.1",
-		"react-dom": "^19.2.1",
+		"react-dom": "^19.2.2",
 		"react-router": "^7.10.1",
 		"typescript": "^5.9.3",
 		"web-vitals": "^5.1.0"

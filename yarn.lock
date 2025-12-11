@@ -5459,7 +5459,7 @@ __metadata:
     ts-jest: "npm:^29.4.6"
     typescript: "npm:^5.9.3"
     vite: "npm:^7.2.3"
-    vite-plugin-biome: "npm:^1.0.12"
+    vite-plugin-biome: "npm:^1.1.0"
     vite-plugin-pwa: "npm:^1.2.0"
     vite-plugin-svgr: "npm:^4.5.0"
     vite-tsconfig-paths: "npm:^5.1.4"
@@ -11941,12 +11941,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-biome@npm:^1.0.12":
-  version: 1.0.12
-  resolution: "vite-plugin-biome@npm:1.0.12"
+"vite-plugin-biome@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "vite-plugin-biome@npm:1.1.0"
   peerDependencies:
-    "@biomejs/biome": ^1.8.0
-  checksum: 10/59cb1da8f9ebb66166474a5daebe7d50700b129c5c02b2a0fb89200a11157355aa3f4fb06d49ffec322c832a3ce0e5d77e1c70703215e9becd899072df1c71dc
+    "@biomejs/biome": ">=1.8.0"
+  checksum: 10/25e2735c7b3a39f68f0791a478f0d71fc031f0ce3675a96ff0cfb3a9449adec1081dba102597146fcf18c43b00b0fe23d7fb74c4d68b815324b2a7f2faaa8f1c
   languageName: node
   linkType: hard
 

@@ -67,7 +67,7 @@
 		"sass": "^1.95.1",
 		"ts-jest": "^29.4.6",
 		"vite": "^7.2.3",
-		"vite-plugin-biome": "^1.0.12",
+		"vite-plugin-biome": "^1.1.0",
 		"vite-plugin-pwa": "^1.2.0",
 		"vite-plugin-svgr": "^4.5.0",
 		"vite-tsconfig-paths": "^5.1.4",

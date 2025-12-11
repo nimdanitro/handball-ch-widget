@@ -5502,7 +5502,7 @@ __metadata:
     jsdom: "npm:^27.3.0"
     react: "npm:^19.1.1"
     react-dom: "npm:^19.1.1"
-    react-router: "npm:^7.9.6"
+    react-router: "npm:^7.10.1"
     replace-env: "npm:^1.0.4"
     sass: "npm:^1.95.1"
     ts-jest: "npm:^29.4.6"
@@ -10179,9 +10179,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.9.6":
-  version: 7.9.6
-  resolution: "react-router@npm:7.9.6"
+"react-router@npm:^7.10.1":
+  version: 7.10.1
+  resolution: "react-router@npm:7.10.1"
   dependencies:
     cookie: "npm:^1.0.1"
     set-cookie-parser: "npm:^2.6.0"
@@ -10191,7 +10191,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10/f34714b3701caf689c306631f5326a9fdab585799021c234aa3eee75bed6bfcea9250f0867e984e4e3c43c77d947c41bd47b70c0601d76c4290e03247fb7ac23
+  checksum: 10/0de854fe2d7d4d8f62337b829dd51fc8ce8167d8dd57e286b55ed6113a5910abe94164f47dda5f0bf2b4344abddaaf1ad6cbe87c0e63ab1ab3766155262dd7da
   languageName: node
   linkType: hard
 

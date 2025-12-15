@@ -2916,10 +2916,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20251210.0":
-  version: 4.20251210.0
-  resolution: "@cloudflare/workers-types@npm:4.20251210.0"
-  checksum: 10/fc7069fc4ab861752bd2645c87152eab3a7aa1ab5768274aea232dcd7afc236a66b1878a12d06767ffd0c984635cb75aeda18756a9a0695ceaae9289a19261c2
+"@cloudflare/workers-types@npm:^4.20251212.0":
+  version: 4.20251212.0
+  resolution: "@cloudflare/workers-types@npm:4.20251212.0"
+  checksum: 10/e2e435a1e992373c6e9775e99fe1e28a48bb833f18f53786dcce5d71183862e6be0bdb6701bdea8495ec3ba17df450a7e20915e00e58f36d415735ae7807955f
   languageName: node
   linkType: hard
 
@@ -5134,12 +5134,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.0.0":
-  version: 25.0.0
-  resolution: "@types/node@npm:25.0.0"
+"@types/node@npm:^25.0.1":
+  version: 25.0.1
+  resolution: "@types/node@npm:25.0.1"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10/ea56dfde037d8c832ba0246066fcd0fb56204d35fc09b8eb2ae8b8a26cb16724f824a47557090b1b51a2c466964c5af700dd6897dd037c1868667cd96afecbd7
+  checksum: 10/a00ac3fc23fb94a06c23f4c9e422ad8f911cb31e4a51e72b7dc7349565b2142df6231f45ebdc4f856e1519f661d8b13074f05855f4b68ce050ac81173dbcbe0f
   languageName: node
   linkType: hard
 
@@ -5483,7 +5483,7 @@ __metadata:
   resolution: "HandballCH-widget@workspace:."
   dependencies:
     "@biomejs/biome": "npm:^2.3.8"
-    "@cloudflare/workers-types": "npm:^4.20251210.0"
+    "@cloudflare/workers-types": "npm:^4.20251212.0"
     "@fortawesome/fontawesome-svg-core": "npm:^7.1.0"
     "@fortawesome/free-solid-svg-icons": "npm:^7.1.0"
     "@fortawesome/react-fontawesome": "npm:^3.1.1"
@@ -5493,7 +5493,7 @@ __metadata:
     "@testing-library/react": "npm:^16.3.0"
     "@testing-library/user-event": "npm:^14.6.1"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^25.0.0"
+    "@types/node": "npm:^25.0.1"
     "@types/react": "npm:^19.2.7"
     "@types/react-dom": "npm:^19.2.3"
     "@vite-pwa/assets-generator": "npm:^1.0.2"
@@ -5508,7 +5508,7 @@ __metadata:
     react-dom: "npm:^19.2.1"
     react-router: "npm:^7.10.1"
     replace-env: "npm:^1.0.4"
-    sass: "npm:^1.95.1"
+    sass: "npm:^1.96.0"
     ts-jest: "npm:^29.4.6"
     typescript: "npm:^5.9.3"
     vite: "npm:^7.2.3"
@@ -10594,9 +10594,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.95.1":
-  version: 1.95.1
-  resolution: "sass@npm:1.95.1"
+"sass@npm:^1.96.0":
+  version: 1.96.0
+  resolution: "sass@npm:1.96.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -10607,7 +10607,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10/548520f8e341d45cde8bcdce5bbe442a874ec4daef658f8caf6fb3ca62f6aacba61411e76b8a26efb25b6d48cfa23af10684bde11010780f68adff43594851f8
+  checksum: 10/be4c0030f8f973fff5ee10bc4fdf5026a63a66a06bc540c9efffb91bead7b22c13174af765196cb73d2f175dd5f4f879afd027312bf600158c7ced6c2de1c1aa
   languageName: node
   linkType: hard
 

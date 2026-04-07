@@ -75,7 +75,7 @@
 	},
 	"resolutions": {
 		"@svgr/webpack": "^6.5.1",
-		"minimatch": "^3.1.2",
+		"minimatch": "^3.1.5",
 		"semver": "^5.7.2",
 		"webpack-dev-server": "5.2.0",
 		"serialize-javascript": "6.0.2",

@@ -20,7 +20,11 @@ updates:
       fontawesome:
         applies-to: version-updates
         patterns:
-          - "@fortawesome*"     
+          - "@fortawesome*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
     labels:
       - "javascript"
       - "dependencies"

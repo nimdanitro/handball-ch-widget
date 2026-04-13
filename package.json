@@ -54,6 +54,13 @@
     "vite-plugin-svgr": "^5.2.0",
     "vitest": "^4.1.4"
   },
+  "resolutions": {
+    "glob": "^13.0.6",
+    "js-yaml": "^4.1.1",
+    "picomatch": "^4.0.4",
+    "serialize-javascript": "^7.0.5",
+    "tar": "^7.5.13"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

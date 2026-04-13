@@ -1,10 +1,12 @@
-import type { Game, GamesPlanned } from "../types/games";
+import { Link } from "react-router";
+import type { GamesPlanned } from "../types/games";
 
 interface NextGamesProps {
   games: GamesPlanned[];
+  clubIds?: number[];
 }
 
-function NextGamesTable({ games }: NextGamesProps) {
+function NextGamesTable({ games, clubIds }: NextGamesProps) {
   return (
     <div className="table-container">
       <table className="table is-hoverable is-narrow is-fullwidth is-striped">
@@ -34,8 +36,20 @@ function NextGamesTable({ games }: NextGamesProps) {
                 }).format(new Date(game.gameDateTime))}
               </td>
               <td>{game.leagueLong}</td>
-              <td>{game.teamAName}</td>
-              <td>{game.teamBName}</td>
+              <td>
+                {clubIds?.includes(game.clubTeamAId) ? (
+                  <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                ) : (
+                  game.teamAName
+                )}
+              </td>
+              <td>
+                {clubIds?.includes(game.clubTeamBId) ? (
+                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                ) : (
+                  game.teamBName
+                )}
+              </td>
               <td>
                 {game.venueAddress && game.venueCity && game.venue && (
                   <a
@@ -67,7 +81,7 @@ function NextGamesTable({ games }: NextGamesProps) {
   );
 }
 
-function NextGamesCard({ games }: NextGamesProps) {
+function NextGamesCard({ games, clubIds }: NextGamesProps) {
   return (
     <>
       {games.map((game) => (
@@ -92,15 +106,29 @@ function NextGamesCard({ games }: NextGamesProps) {
                 </div>
               </div>
               <div className="columns mt-1 mb-1 is-gapless">
-                <div className="column is-one-third is-size-6">{game.teamAName}</div>
+                <div className="column is-one-third is-size-6">
+                  {clubIds?.includes(game.clubTeamAId) ? (
+                    <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                  ) : (
+                    game.teamAName
+                  )}
+                </div>
                 <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
                   -
                 </div>
                 <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  {game.teamBName}
+                  {clubIds?.includes(game.clubTeamBId) ? (
+                    <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  ) : (
+                    game.teamBName
+                  )}
                 </div>
                 <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  {game.teamBName}
+                  {clubIds?.includes(game.clubTeamBId) ? (
+                    <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  ) : (
+                    game.teamBName
+                  )}
                 </div>
               </div>
               <div className="columns is-gapless is-size-7 is-mobile">
@@ -134,7 +162,7 @@ function NextGamesCard({ games }: NextGamesProps) {
   );
 }
 
-function NextGames({ games }: { games: Game[] }) {
+function NextGames({ games, clubIds }: NextGamesProps) {
   if (games.length === 0) return null;
 
   return (
@@ -142,10 +170,10 @@ function NextGames({ games }: { games: Game[] }) {
       <div className="container">
         <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
         <div className="is-hidden-touch">
-          <NextGamesTable games={games} />
+          <NextGamesTable games={games} clubIds={clubIds} />
         </div>
         <div className="is-hidden-desktop">
-          <NextGamesCard games={games} />
+          <NextGamesCard games={games} clubIds={clubIds} />
         </div>
       </div>
     </section>

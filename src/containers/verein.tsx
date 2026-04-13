@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router";
+import type { Team } from "types/teams";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { NextGames } from "../components/nextGames";
 import { Results } from "../components/results";
 import type { Game } from "../types/games";
 
 function Verein() {
-  let { id } = useParams();
+  const { id } = useParams();
   const [searchParams] = useSearchParams();
 
-  let numResults: number = Number(searchParams.get("results")) || 10;
-  let numNext: number = Number(searchParams.get("next")) || 10;
+  const numResults: number = Number(searchParams.get("results")) || 10;
+  const numNext: number = Number(searchParams.get("next")) || 10;
 
   const [gamesPlanned, setGamesPlanned] = useState<Game[]>([]);
   const [gamesPlayed, setGamesPlayed] = useState<Game[]>([]);
   const [isLoading, setLoading] = useState(true);
+  const [clubIds, setClubIds] = useState<number[]>([Number(id)]);
 
   useEffect(() => {
     fetch(`/rest/v1/clubs/${id}/games`)
@@ -43,6 +45,15 @@ function Verein() {
       .finally(() => setLoading(false));
   }, [id, numResults, numNext]);
 
+  useEffect(() => {
+    fetch(`/rest/v1/clubs/${id}/teams`)
+      .then((res) => res.json())
+      .then((data: Team[]) => {
+        setClubIds(data.map((team) => team.clubId));
+      })
+      .catch((err) => console.log(err));
+  }, [id]);
+
   if (isLoading)
     return (
       <section className="section">
@@ -55,8 +66,8 @@ function Verein() {
 
   return (
     <>
-      <Results games={gamesPlayed} />
-      <NextGames games={gamesPlanned} />
+      <Results games={gamesPlayed} clubIds={clubIds} />
+      <NextGames games={gamesPlanned} clubIds={clubIds} />
     </>
   );
 }

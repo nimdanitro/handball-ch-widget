@@ -3,10 +3,10 @@ import type { GamesPlanned } from "../types/games";
 
 interface NextGamesProps {
   games: GamesPlanned[];
-  clubId?: number;
+  clubIds?: number[];
 }
 
-function NextGamesTable({ games, clubId }: NextGamesProps) {
+function NextGamesTable({ games, clubIds }: NextGamesProps) {
   return (
     <div className="table-container">
       <table className="table is-hoverable is-narrow is-fullwidth is-striped">
@@ -37,14 +37,14 @@ function NextGamesTable({ games, clubId }: NextGamesProps) {
               </td>
               <td>{game.leagueLong}</td>
               <td>
-                {clubId === game.clubTeamAId ? (
+                {clubIds?.includes(game.clubTeamAId) ? (
                   <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
                 ) : (
                   game.teamAName
                 )}
               </td>
               <td>
-                {clubId === game.clubTeamBId ? (
+                {clubIds?.includes(game.clubTeamBId) ? (
                   <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                 ) : (
                   game.teamBName
@@ -81,7 +81,7 @@ function NextGamesTable({ games, clubId }: NextGamesProps) {
   );
 }
 
-function NextGamesCard({ games, clubId }: NextGamesProps) {
+function NextGamesCard({ games, clubIds }: NextGamesProps) {
   return (
     <>
       {games.map((game) => (
@@ -107,7 +107,7 @@ function NextGamesCard({ games, clubId }: NextGamesProps) {
               </div>
               <div className="columns mt-1 mb-1 is-gapless">
                 <div className="column is-one-third is-size-6">
-                  {clubId === game.clubTeamAId ? (
+                  {clubIds?.includes(game.clubTeamAId) ? (
                     <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
                   ) : (
                     game.teamAName
@@ -117,14 +117,14 @@ function NextGamesCard({ games, clubId }: NextGamesProps) {
                   -
                 </div>
                 <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  {clubId === game.clubTeamBId ? (
+                  {clubIds?.includes(game.clubTeamBId) ? (
                     <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                   ) : (
                     game.teamBName
                   )}
                 </div>
                 <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  {clubId === game.clubTeamBId ? (
+                  {clubIds?.includes(game.clubTeamBId) ? (
                     <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                   ) : (
                     game.teamBName
@@ -162,7 +162,7 @@ function NextGamesCard({ games, clubId }: NextGamesProps) {
   );
 }
 
-function NextGames({ games, clubId }: NextGamesProps) {
+function NextGames({ games, clubIds }: NextGamesProps) {
   if (games.length === 0) return null;
 
   return (
@@ -170,10 +170,10 @@ function NextGames({ games, clubId }: NextGamesProps) {
       <div className="container">
         <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
         <div className="is-hidden-touch">
-          <NextGamesTable games={games} clubId={clubId} />
+          <NextGamesTable games={games} clubIds={clubIds} />
         </div>
         <div className="is-hidden-desktop">
-          <NextGamesCard games={games} clubId={clubId} />
+          <NextGamesCard games={games} clubIds={clubIds} />
         </div>
       </div>
     </section>

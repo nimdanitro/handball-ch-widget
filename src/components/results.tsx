@@ -3,10 +3,10 @@ import type { GamePlayed } from "../types/games";
 
 interface ResultsProps {
   games: GamePlayed[];
-  clubId?: number;
+  clubIds?: number[];
 }
 
-function ResultsTable({ games, clubId }: ResultsProps) {
+function ResultsTable({ games, clubIds }: ResultsProps) {
   return (
     <div className="table-container">
       <table className="table is-hoverable is-narrow is-fullwidth is-striped">
@@ -38,14 +38,14 @@ function ResultsTable({ games, clubId }: ResultsProps) {
               </td>
               <td>{game.leagueLong}</td>
               <td>
-                {clubId === game.clubTeamAId ? (
+                {clubIds?.includes(game.clubTeamAId) ? (
                   <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
                 ) : (
                   game.teamAName
                 )}
               </td>
               <td>
-                {clubId === game.clubTeamBId ? (
+                {clubIds?.includes(game.clubTeamBId) ? (
                   <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                 ) : (
                   game.teamBName
@@ -69,7 +69,7 @@ function ResultsTable({ games, clubId }: ResultsProps) {
   );
 }
 
-function ResultsCards({ games, clubId }: ResultsProps) {
+function ResultsCards({ games, clubIds }: ResultsProps) {
   return (
     <>
       {games.map((game) => (
@@ -95,7 +95,7 @@ function ResultsCards({ games, clubId }: ResultsProps) {
               </div>
               <div className="columns mt-1 is-gapless">
                 <div className="column is-one-third is-size-6">
-                  {clubId === game.clubTeamAId ? (
+                  {clubIds?.includes(game.clubTeamAId) ? (
                     <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
                   ) : (
                     game.teamAName
@@ -105,14 +105,14 @@ function ResultsCards({ games, clubId }: ResultsProps) {
                   -
                 </div>
                 <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  {clubId === game.clubTeamBId ? (
+                  {clubIds?.includes(game.clubTeamBId) ? (
                     <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                   ) : (
                     game.teamBName
                   )}
                 </div>
                 <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  {clubId === game.clubTeamBId ? (
+                  {clubIds?.includes(game.clubTeamBId) ? (
                     <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                   ) : (
                     game.teamBName
@@ -148,7 +148,7 @@ function ResultsCards({ games, clubId }: ResultsProps) {
   );
 }
 
-function Results({ games, clubId }: ResultsProps) {
+function Results({ games, clubIds }: ResultsProps) {
   if (games.length === 0) return null;
 
   return (
@@ -156,10 +156,10 @@ function Results({ games, clubId }: ResultsProps) {
       <div className="container">
         <h1 className="title is-uppercase is-size-4">Letzte Resultate</h1>
         <div className="is-hidden-touch">
-          <ResultsTable games={games} clubId={clubId} />
+          <ResultsTable games={games} clubIds={clubIds} />
         </div>
         <div className="is-hidden-desktop">
-          <ResultsCards games={games} clubId={clubId} />
+          <ResultsCards games={games} clubIds={clubIds} />
         </div>
       </div>
     </section>

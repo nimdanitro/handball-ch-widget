@@ -54,14 +54,6 @@
     "vite-plugin-svgr": "^5.2.0",
     "vitest": "^4.1.4"
   },
-  "resolutions": {
-    "@svgr/webpack": "^6.5.1",
-    "minimatch": "^3.1.2",
-    "postcss": "8.5.2",
-    "semver": "^5.7.2",
-    "serialize-javascript": "6.0.2",
-    "webpack-dev-server": "5.2.0"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

@@ -27,7 +27,6 @@ Hence, if you want do display the last 20 results and the next 30 games of club 
 
 [https://${hostname}/verein/140675?results=20&next=30](https://${hostname}/verein/140675?results=20&next=30)
 
-
 # Acknowledgements
 
 This project has been created in collaboration with the [HC KTV Altdorf](https://hc-ktv-altdorf.ch/).

@@ -1,31 +1,33 @@
-export async function onRequestGet({ request, env, params }) {
-	const url = new URL(request.url);
+interface Env {
+  API_KEY: string;
+}
 
-	const cache = caches.default;
-	const apiReq = new Request(
-		`https://clubapi.handball.ch${url.pathname}?${url.searchParams}`,
-	);
+export async function onRequestGet({ request, env }: { request: Request; env: Env }) {
+  const url = new URL(request.url);
 
-	let res = await cache.match(apiReq);
-	if (!res) {
-		res = await fetch(apiReq, {
-			cf: {
-				cacheTtl: 60,
-				cacheEverything: true,
-			},
-			headers: {
-				Authorization: `Basic ${env.API_KEY}`,
-			},
-		});
-	}
+  const cache = caches.default;
+  const apiReq = new Request(`https://clubapi.handball.ch${url.pathname}?${url.searchParams}`);
 
-	// Reconstruct the Response object to make its headers mutable.
-	let response = new Response(res.body, res);
+  let res = await cache.match(apiReq);
+  if (!res) {
+    res = await fetch(apiReq, {
+      cf: {
+        cacheTtl: 60,
+        cacheEverything: true,
+      },
+      headers: {
+        Authorization: `Basic ${env.API_KEY}`,
+      },
+    });
+  }
 
-	// Set cache control headers to cache on browser for 60 minutes
-	response.headers.set("Cache-Control", "max-age=3600");
+  // Reconstruct the Response object to make its headers mutable.
+  let response = new Response(res.body, res);
 
-	await cache.put(apiReq, response.clone());
+  // Set cache control headers to cache on browser for 60 minutes
+  response.headers.set("Cache-Control", "max-age=3600");
 
-	return response;
+  await cache.put(apiReq, response.clone());
+
+  return response;
 }

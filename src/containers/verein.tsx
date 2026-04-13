@@ -49,7 +49,7 @@ function Verein() {
     fetch(`/rest/v1/clubs/${id}/teams`)
       .then((res) => res.json())
       .then((data: Team[]) => {
-        setClubIds(data.map((team) => team.teamId));
+        setClubIds(data.map((team) => team.clubId));
       })
       .catch((err) => console.log(err));
   }, [id]);

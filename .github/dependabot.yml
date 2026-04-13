@@ -40,7 +40,7 @@ updates:
     labels:
       - "docker"
       - "dependencies"
-      
+
   # Enable version updates for Github Actions
   - package-ecosystem: "github-actions"
     directory: "/"

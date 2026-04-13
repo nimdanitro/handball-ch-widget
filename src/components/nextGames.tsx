@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { Game, GamesPlanned } from "../types/games";
 
 interface NextGamesProps {
@@ -34,8 +35,12 @@ function NextGamesTable({ games }: NextGamesProps) {
                 }).format(new Date(game.gameDateTime))}
               </td>
               <td>{game.leagueLong}</td>
-              <td>{game.teamAName}</td>
-              <td>{game.teamBName}</td>
+              <td>
+                <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+              </td>
+              <td>
+                <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+              </td>
               <td>
                 {game.venueAddress && game.venueCity && game.venue && (
                   <a
@@ -92,15 +97,17 @@ function NextGamesCard({ games }: NextGamesProps) {
                 </div>
               </div>
               <div className="columns mt-1 mb-1 is-gapless">
-                <div className="column is-one-third is-size-6">{game.teamAName}</div>
+                <div className="column is-one-third is-size-6">
+                  <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                </div>
                 <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
                   -
                 </div>
                 <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  {game.teamBName}
+                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                 </div>
                 <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  {game.teamBName}
+                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
                 </div>
               </div>
               <div className="columns is-gapless is-size-7 is-mobile">

@@ -4,7 +4,9 @@ export interface GamePlayed {
   gameDateTime: Date;
   gameTypeLong: string;
   gameTypeShort: string;
+  teamAId: number;
   teamAName: string;
+  teamBId: number;
   teamBName: string;
   leagueLong: string;
   leagueShort: string;
@@ -55,7 +57,9 @@ export interface GamesPlanned {
   gameTypeLong: string;
   gameTypeShort: string;
   teamAName: string;
+  teamBId: number;
   teamBName: string;
+  teamAId: number;
   leagueLong: string;
   leagueShort: string;
   gameStatus: string;

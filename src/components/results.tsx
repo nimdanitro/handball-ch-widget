@@ -39,14 +39,30 @@ function ResultsTable({ games, clubIds }: ResultsProps) {
               <td>{game.leagueLong}</td>
               <td>
                 {clubIds?.includes(game.clubTeamAId) ? (
-                  <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                  <Link to={`/team/${game.teamAId}`}>
+                    {game.teamAScoreFT > game.teamBScoreFT ? (
+                      <strong>{game.teamAName}</strong>
+                    ) : (
+                      game.teamAName
+                    )}
+                  </Link>
+                ) : game.teamAScoreFT > game.teamBScoreFT ? (
+                  <strong>{game.teamAName}</strong>
                 ) : (
                   game.teamAName
                 )}
               </td>
               <td>
                 {clubIds?.includes(game.clubTeamBId) ? (
-                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  <Link to={`/team/${game.teamBId}`}>
+                    {game.teamBScoreFT > game.teamAScoreFT ? (
+                      <strong>{game.teamBName}</strong>
+                    ) : (
+                      game.teamBName
+                    )}
+                  </Link>
+                ) : game.teamBScoreFT > game.teamAScoreFT ? (
+                  <strong>{game.teamBName}</strong>
                 ) : (
                   game.teamBName
                 )}
@@ -96,7 +112,15 @@ function ResultsCards({ games, clubIds }: ResultsProps) {
               <div className="columns mt-1 is-gapless">
                 <div className="column is-one-third is-size-6">
                   {clubIds?.includes(game.clubTeamAId) ? (
-                    <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                    <Link to={`/team/${game.teamAId}`}>
+                      {game.teamAScoreFT > game.teamBScoreFT ? (
+                        <strong>{game.teamAName}</strong>
+                      ) : (
+                        game.teamAName
+                      )}
+                    </Link>
+                  ) : game.teamAScoreFT > game.teamBScoreFT ? (
+                    <strong>{game.teamAName}</strong>
                   ) : (
                     game.teamAName
                   )}
@@ -106,7 +130,15 @@ function ResultsCards({ games, clubIds }: ResultsProps) {
                 </div>
                 <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
                   {clubIds?.includes(game.clubTeamBId) ? (
-                    <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                    <Link to={`/team/${game.teamBId}`}>
+                      {game.teamBScoreFT > game.teamAScoreFT ? (
+                        <strong>{game.teamBName}</strong>
+                      ) : (
+                        game.teamBName
+                      )}
+                    </Link>
+                  ) : game.teamBScoreFT > game.teamAScoreFT ? (
+                    <strong>{game.teamBName}</strong>
                   ) : (
                     game.teamBName
                   )}
@@ -114,6 +146,8 @@ function ResultsCards({ games, clubIds }: ResultsProps) {
                 <div className="column is-one-third is-size-6 is-hidden-tablet">
                   {clubIds?.includes(game.clubTeamBId) ? (
                     <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  ) : game.teamBScoreFT > game.teamAScoreFT ? (
+                    <strong>{game.teamBName}</strong>
                   ) : (
                     game.teamBName
                   )}

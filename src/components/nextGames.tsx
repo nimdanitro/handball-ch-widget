@@ -37,10 +37,18 @@ function NextGamesTable({ games, clubId }: NextGamesProps) {
               </td>
               <td>{game.leagueLong}</td>
               <td>
-                { clubId === game.teamAId ? <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link> : game.teamAName }
+                {clubId === game.clubTeamAId ? (
+                  <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                ) : (
+                  game.teamAName
+                )}
               </td>
               <td>
-                { clubId === game.teamBId ? <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link> : game.teamBName }
+                {clubId === game.clubTeamBId ? (
+                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                ) : (
+                  game.teamBName
+                )}
               </td>
               <td>
                 {game.venueAddress && game.venueCity && game.venue && (
@@ -99,16 +107,28 @@ function NextGamesCard({ games, clubId }: NextGamesProps) {
               </div>
               <div className="columns mt-1 mb-1 is-gapless">
                 <div className="column is-one-third is-size-6">
-                  { clubId === game.teamAId ? <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link> : game.teamAName }
+                  {clubId === game.clubTeamAId ? (
+                    <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                  ) : (
+                    game.teamAName
+                  )}
                 </div>
                 <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
                   -
                 </div>
                 <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  { clubId === game.teamBId ? <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link> : game.teamBName }
+                  {clubId === game.clubTeamBId ? (
+                    <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  ) : (
+                    game.teamBName
+                  )}
                 </div>
                 <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  { clubId === game.teamBId ? <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link> : game.teamBName }
+                  {clubId === game.clubTeamBId ? (
+                    <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  ) : (
+                    game.teamBName
+                  )}
                 </div>
               </div>
               <div className="columns is-gapless is-size-7 is-mobile">

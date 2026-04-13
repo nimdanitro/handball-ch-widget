@@ -1,11 +1,12 @@
 import { Link } from "react-router";
-import type { Game, GamePlayed } from "../types/games";
+import type { GamePlayed } from "../types/games";
 
 interface ResultsProps {
   games: GamePlayed[];
+  clubId?: number;
 }
 
-function ResultsTable({ games }: ResultsProps) {
+function ResultsTable({ games, clubId }: ResultsProps) {
   return (
     <div className="table-container">
       <table className="table is-hoverable is-narrow is-fullwidth is-striped">
@@ -37,10 +38,10 @@ function ResultsTable({ games }: ResultsProps) {
               </td>
               <td>{game.leagueLong}</td>
               <td>
-                <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                { clubId === game.teamAId ? <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link> : game.teamAName }
               </td>
               <td>
-                <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                { clubId === game.teamBId ? <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link> : game.teamBName }
               </td>
               <td>
                 {game.teamAScoreFT} - {game.teamBScoreFT} ({game.teamAScoreHT} - {game.teamBScoreHT}
@@ -60,7 +61,7 @@ function ResultsTable({ games }: ResultsProps) {
   );
 }
 
-function ResultsCards({ games }: ResultsProps) {
+function ResultsCards({ games, clubId }: ResultsProps) {
   return (
     <>
       {games.map((game) => (
@@ -86,16 +87,16 @@ function ResultsCards({ games }: ResultsProps) {
               </div>
               <div className="columns mt-1 is-gapless">
                 <div className="column is-one-third is-size-6">
-                  <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
+                  { clubId === game.teamAId ? <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link> : game.teamAName }
                 </div>
                 <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
                   -
                 </div>
                 <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  { clubId === game.teamBId ? <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link> : game.teamBName }
                 </div>
                 <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
+                  { clubId === game.teamBId ? <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link> : game.teamBName }
                 </div>
               </div>
               <div className="columns is-gapless is-mobile">
@@ -127,7 +128,7 @@ function ResultsCards({ games }: ResultsProps) {
   );
 }
 
-function Results({ games }: { games: Game[] }) {
+function Results({ games, clubId }: ResultsProps) {
   if (games.length === 0) return null;
 
   return (
@@ -135,10 +136,10 @@ function Results({ games }: { games: Game[] }) {
       <div className="container">
         <h1 className="title is-uppercase is-size-4">Letzte Resultate</h1>
         <div className="is-hidden-touch">
-          <ResultsTable games={games} />
+          <ResultsTable games={games} clubId={clubId} />
         </div>
         <div className="is-hidden-desktop">
-          <ResultsCards games={games} />
+          <ResultsCards games={games} clubId={clubId} />
         </div>
       </div>
     </section>

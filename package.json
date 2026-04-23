@@ -28,7 +28,7 @@
     "web-vitals": "^5.2.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260421.1",
+    "@cloudflare/workers-types": "^4.20260423.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -49,10 +49,10 @@
     "replace-env": "^1.0.4",
     "sass": "^1.99.0",
     "ts-jest": "^29.4.9",
-    "vite": "^8.0.9",
+    "vite": "^8.0.10",
     "vite-plugin-pwa": "^1.2.0",
     "vite-plugin-svgr": "^5.2.0",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.5"
   },
   "resolutions": {
     "glob": "^13.0.6",

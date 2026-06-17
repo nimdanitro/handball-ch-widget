@@ -5065,7 +5065,7 @@ __metadata:
     oxlint: "npm:^1.61.0"
     react: "npm:^19.2.5"
     react-dom: "npm:^19.2.5"
-    react-router: "npm:^7.14.1"
+    react-router: "npm:^8.0.0"
     replace-env: "npm:^1.0.4"
     sass: "npm:^1.99.0"
     ts-jest: "npm:^29.4.9"
@@ -5856,10 +5856,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "cookie@npm:1.0.2"
-  checksum: 10/f5817cdc84d8977761b12549eba29435e675e65c7fef172bc31737788cd8adc83796bf8abe6d950554e7987325ad2d9ac2971c5bd8ff0c4f81c145f82e4ab1be
+"cookie-es@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "cookie-es@npm:3.1.1"
+  checksum: 10/e40083c42d0e3a4b3caa271775858f8e6cdd31f24b9c445ff08d7a8f4dc01069fc82012bdf1602d5a03fa1d75aba51a3dd33cd8a5db639db2ed17bcfd650f4bc
   languageName: node
   linkType: hard
 
@@ -9665,19 +9665,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.14.1":
-  version: 7.14.1
-  resolution: "react-router@npm:7.14.1"
+"react-router@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "react-router@npm:8.0.0"
   dependencies:
-    cookie: "npm:^1.0.1"
-    set-cookie-parser: "npm:^2.6.0"
+    cookie-es: "npm:^3.1.1"
   peerDependencies:
-    react: ">=18"
-    react-dom: ">=18"
+    react: ">=19.2.7"
+    react-dom: ">=19.2.7"
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10/8d518134e2d3f8aea84665881c84e3d3c2967d39c1bad01adce86d32549dbd13155f224325fd8cca851cf39bd6cb0c3e8aaff71403d910a7b15226cf9cb124cd
+  checksum: 10/cecd83f5644be6477b88bd2f1550744f5e4a2c9de56077688b1e6fb48f006642900ce7afb12df72f2bf340b36dd97fd3c94061b70cd3511f9003be791a2fbe71
   languageName: node
   linkType: hard
 
@@ -10240,13 +10239,6 @@ __metadata:
   version: 7.0.5
   resolution: "serialize-javascript@npm:7.0.5"
   checksum: 10/6237c76ef6df3d1ad61dd4a393b71ca758c7654f4d1cf77529e513134c0f0660302e03b7ec88a8f3a3daa79e1f93d6de8218ecbc45e073d7cc6b66284a1d3e83
-  languageName: node
-  linkType: hard
-
-"set-cookie-parser@npm:^2.6.0":
-  version: 2.7.1
-  resolution: "set-cookie-parser@npm:2.7.1"
-  checksum: 10/c92b1130032693342bca13ea1b1bc93967ab37deec4387fcd8c2a843c0ef2fd9a9f3df25aea5bb3976cd05a91c2cf4632dd6164d6e1814208fb7d7e14edd42b4
   languageName: node
   linkType: hard
 

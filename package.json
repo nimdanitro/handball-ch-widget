@@ -49,7 +49,7 @@
     "replace-env": "^1.0.4",
     "sass": "^1.99.0",
     "ts-jest": "^29.4.9",
-    "vite": "^8.0.9",
+    "vite": "^8.0.16",
     "vite-plugin-pwa": "^1.2.0",
     "vite-plugin-svgr": "^5.2.0",
     "vitest": "^4.1.4"

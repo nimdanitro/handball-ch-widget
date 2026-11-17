@@ -61,3 +61,20 @@ $section-padding: 2rem 0.5rem;
 @import "bulma/sass/components/card.sass";
 @import "bulma/sass/helpers/_all.sass";
 @import "bulma/sass/grid/columns.sass";
+
+.loading-spinner {
+  display: inline-block;
+  width: 1.33em;
+  height: 1.33em;
+  border: 0.15em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: loading-spin 0.75s linear infinite;
+  vertical-align: -0.25em;
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

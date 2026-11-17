@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+
+:root {
+  --primary: rgba(255, 209, 0, 1);
+  --link: hsl(44, 100%, 77%);
+  --text: #fff;
+  --text-strong: #f2f2f2;
+  --card-bg: hsl(0, 0%, 14%);
+  --row-alt: hsl(0, 0%, 7%);
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* base */
+html {
+  background-color: #000;
+  font-size: 16px;
+  min-width: 300px;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #000;
+  color: var(--text);
+  font-family: "Exo", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--link);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-strong);
+}
+
+strong {
+  color: var(--text-strong);
+  font-weight: 700;
+}
+
+/* layout */
+.section {
+  padding: 2rem 0.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.container.is-fluid {
+  max-width: none;
+  padding: 0 32px;
+}
+
+.title {
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  word-break: break-word;
+}
+
+.title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.content:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* card */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 0.25rem;
+  color: var(--text);
+  max-width: 100%;
+  position: relative;
+}
+
+.card-content {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+}
+
+/* table */
+.table-container {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.table-container:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  background-color: #000;
+  color: var(--text-strong);
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 0.25em 0.5em;
+  vertical-align: top;
+}
+
+.table th {
+  color: var(--text-strong);
+  text-align: left;
+}
+
+.table thead th {
+  border-bottom: 2px solid var(--primary);
+}
+
+.table tbody tr:hover {
+  background-color: hsl(0, 0%, 7%);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--row-alt);
+}
+
+.table tbody tr:nth-child(even):hover {
+  background-color: var(--card-bg);
+}
+
+/* columns (flex grid) */
+.columns {
+  display: flex;
+  margin: 0;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.column {
+  display: block;
+  flex: 1 1 0;
+  padding: 0;
+}
+
+.is-half {
+  flex: none;
+  width: 50%;
+}
+
+.is-one-third {
+  flex: none;
+  width: 33.3333%;
+}
+
+@media screen and (max-width: 768px) {
+  /* columns that are not .is-mobile stack on small screens */
+  .columns:not(.is-mobile) {
+    display: block;
+  }
+
+  .columns:not(.is-mobile) > .is-one-third {
+    width: auto;
+  }
+}
+
+/* spacing and text helpers */
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.is-size-4 {
+  font-size: 1.5rem;
+}
+
+.is-size-6 {
+  font-size: 1rem;
+}
+
+.is-size-7 {
+  font-size: 0.75rem;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+.has-text-left {
+  text-align: left;
+}
+
+.has-text-centered {
+  text-align: center;
+}
+
+.has-text-right {
+  text-align: right;
+}
+
+.has-text-primary {
+  color: var(--primary);
+}
+
+/* responsive visibility */
+@media screen and (max-width: 768px) {
+  .is-hidden-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .is-hidden-tablet {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .is-hidden-touch {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3rem;
+  }
+
+  .is-hidden-desktop {
+    display: none;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .container {
+    max-width: 1344px;
+  }
+}
+
+/* loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 1.33em;
+  height: 1.33em;
+  border: 0.15em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: loading-spin 0.75s linear infinite;
+  vertical-align: -0.25em;
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container.is-fluid {
+  max-width: none;
+}

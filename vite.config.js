@@ -38,12 +38,15 @@ export default defineConfig({
       injectRegister: "auto",
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2,pbf,json}"],
-        navigateFallbackDenylist: [/^\/oauth2/, /^\/api/],
+        navigateFallbackDenylist: [/^\/rest\//],
         maximumFileSizeToCacheInBytes: 3145728, // 3MB
       },
       manifest: {
         short_name: "Handball Resultate",
         name: "Handball Resultate",
+        description: "Letzte Resultate und nächste Spiele",
+        lang: "de",
+        display: "standalone",
         icons: [
           {
             src: "pwa-64x64.png",
@@ -70,7 +73,7 @@ export default defineConfig({
         ],
         start_url: ".",
         theme_color: "#000000",
-        background_color: "#ffffff",
+        background_color: "#000000",
       },
     }),
   ],

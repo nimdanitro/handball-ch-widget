@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
-import { expect, test } from "vitest";
+import { afterEach, expect, test } from "vitest";
 import type { GamePlayed, GamesPlanned } from "../types/games";
 import { NextGames } from "./nextGames";
 import { Results } from "./results";
@@ -37,6 +37,12 @@ const played = {
 
 const planned = base as GamesPlanned;
 
+const setViewport = (width: number) => {
+  window.innerWidth = width;
+};
+
+afterEach(() => setViewport(1024));
+
 const renderIn = (ui: React.ReactNode) => render(<MemoryRouter>{ui}</MemoryRouter>);
 
 test("results show the winner in bold and link own teams", () => {
@@ -51,22 +57,34 @@ test("results show the winner in bold and link own teams", () => {
   expect(within(row).getByText("17 - 15 (9 - 8)")).toBeInTheDocument();
 });
 
-test("results render a table and cards with the matchcenter link opening in a new tab", () => {
+test("results render the table on desktop and only the table", () => {
   renderIn(<Results games={[played]} />);
+  expect(screen.getAllByRole("table")).toHaveLength(1);
+  expect(screen.queryByText("Matchcenter")).not.toBeInTheDocument();
+  const live = screen.getByText("Live-Ticker");
+  expect(live).toHaveAttribute("target", "_blank");
+  expect(live).toHaveAttribute("rel", "noopener noreferrer");
+});
+
+test("results render cards on small screens and only the cards", () => {
+  setViewport(500);
+  renderIn(<Results games={[played]} />);
+  expect(screen.queryByRole("table")).not.toBeInTheDocument();
   expect(screen.getByText("Matchcenter")).toHaveAttribute(
     "href",
     "https://www.handball.ch/de/matchcenter/spiele/7",
   );
-  const live = screen.getByText("Live-Ticker");
-  expect(live).toHaveAttribute("target", "_blank");
-  expect(live).toHaveAttribute("rel", "noopener noreferrer");
+  expect(screen.queryByText("Live-Ticker")).not.toBeInTheDocument();
   expect(screen.getByText("17 : 15")).toBeInTheDocument();
+  // the guest is rendered once and without the "-" separator on phones
+  expect(screen.getAllByText("Gast")).toHaveLength(1);
+  expect(screen.queryByText("-")).not.toBeInTheDocument();
 });
 
 test("next games link the venue to Google Maps", () => {
   renderIn(<NextGames games={[planned]} />);
   const venues = screen.getAllByText("Halle Nord");
-  expect(venues).toHaveLength(2); // table and card
+  expect(venues).toHaveLength(1);
   for (const venue of venues)
     expect(venue).toHaveAttribute(
       "href",

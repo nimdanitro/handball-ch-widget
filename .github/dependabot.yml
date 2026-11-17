@@ -10,6 +10,9 @@ updates:
       interval: "daily"
       time: "20:00"
     open-pull-requests-limit: 10
+    # wait a few days after a release before proposing it (security updates are not delayed)
+    cooldown:
+      default-days: 3
     groups:
       development-dependencies:
         dependency-type: "development"
@@ -40,6 +43,8 @@ updates:
   # Enable version updates for Github Actions
   - package-ecosystem: "github-actions"
     directory: "/"
+    cooldown:
+      default-days: 3
     reviewers:
       - nimdanitro
     schedule:

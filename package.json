@@ -34,7 +34,6 @@
     "@types/react-dom": "^19.3.0",
     "@vite-pwa/assets-generator": "^2.0.0",
     "@vitejs/plugin-react": "^6.3.0",
-    "globals": "^17.14.0",
     "jsdom": "^31.0.1",
     "oxfmt": "^0.79.0",
     "oxlint": "^1.94.0",
@@ -45,15 +44,10 @@
     "vitest": "^5.1.0"
   },
   "resolutions": {
-    "brace-expansion": "^5.0.13",
     "glob": "^14.0.2",
     "ip-address": "^10.7.6",
-    "js-yaml": "^4.3.2",
     "minimatch": "^11.0.1",
     "picomatch": "^4.0.7",
-    "serialize-javascript": "^7.1.4",
-    "sharp": "^0.35.5",
-    "source-map-js": "^1.2.2",
     "tar": "^7.5.23"
   },
   "browserslist": {

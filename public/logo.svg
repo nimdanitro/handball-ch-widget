@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Handball Resultate</title>
+  <circle cx="256" cy="256" r="240" fill="#000"/>
+  <circle cx="256" cy="256" r="200" fill="#ffd100"/>
+  <g fill="none" stroke="#000" stroke-width="14" stroke-linecap="round">
+    <path d="M100 150 C 180 200, 190 300, 130 400"/>
+    <path d="M412 150 C 332 200, 322 300, 382 400"/>
+    <path d="M190 62 C 230 130, 282 130, 322 62"/>
+    <path d="M190 450 C 230 382, 282 382, 322 450"/>
+    <path d="M165 256 C 210 225, 302 225, 347 256"/>
+    <path d="M165 256 C 210 287, 302 287, 347 256"/>
+  </g>
+</svg>

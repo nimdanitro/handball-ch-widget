@@ -15,9 +15,11 @@ export default defineConfig({
     },
     maskable: {
       sizes: [512],
+      resizeOptions: { background: "#000000" },
     },
     apple: {
       sizes: [180],
+      resizeOptions: { background: "#000000" },
     },
   },
   images: ["public/logo.svg"],

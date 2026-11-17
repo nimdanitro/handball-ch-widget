@@ -14,7 +14,8 @@
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "lint:github": "oxlint --format=github",
-    "pre-build": "replace-env public/_headers"
+    "pre-build": "replace-env public/_headers",
+    "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
     "react": "^19.3.1",

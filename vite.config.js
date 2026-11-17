@@ -4,7 +4,6 @@ import path from "node:path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
-import svgrPlugin from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -31,7 +30,6 @@ export default defineConfig({
   },
   plugins: [
     react({ devTarget: "es2022" }),
-    svgrPlugin(),
     VitePWA({
       registerType: "autoUpdate",
       strategies: "generateSW",

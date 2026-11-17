@@ -3229,6 +3229,7 @@ __metadata:
     react: "npm:^19.3.1"
     react-dom: "npm:^19.3.1"
     react-router: "npm:^8.5.1"
+    replace-env: "npm:^1.0.4"
     sass: "npm:^1.108.2"
     typescript: "npm:^7.0.2"
     vite: "npm:^8.3.8"
@@ -6431,6 +6432,15 @@ __metadata:
   bin:
     regjsparser: bin/parser
   checksum: 10/be7757ef76e1db10bf6996001d1021048b5fb12f5cb470a99b8cf7f3ff943f0f0e2291c0dcdbb418b458ddc4ac10e48680a822b69ef487a0284c8b6b77beddc3
+  languageName: node
+  linkType: hard
+
+"replace-env@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "replace-env@npm:1.0.4"
+  bin:
+    replace-env: ./replace.js
+  checksum: 10/3ac961d24e8570129362798414f7ffb666d82543c6ae8f75b31ba8147705c692fec923951c4fa17c191ca4bbd29e9767749ea5650e985f3f09df1d93bc6c481a
   languageName: node
   linkType: hard
 

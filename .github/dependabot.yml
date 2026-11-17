@@ -17,10 +17,6 @@ updates:
         update-types:
           - "minor"
           - "patch"
-      fontawesome:
-        applies-to: version-updates
-        patterns:
-          - "@fortawesome*"
       react:
         patterns:
           - "react"

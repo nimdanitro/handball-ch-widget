@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { TABLET, useMediaQuery } from "../hooks/useMediaQuery";
 import { type GameBase, GuestName, HomeName, MatchcenterLink, formatDateTime } from "./gameParts";
 
 interface GameCardProps {
@@ -16,6 +17,7 @@ interface GameCardProps {
 }
 
 function GameCard({ game, clubIds, linkLabel, winner, score, footerRight, tight }: GameCardProps) {
+  const isTablet = useMediaQuery(TABLET);
   const guest = <GuestName game={game} clubIds={clubIds} bold={winner === "guest"} />;
   return (
     <div className="card mb-1">
@@ -37,13 +39,14 @@ function GameCard({ game, clubIds, linkLabel, winner, score, footerRight, tight 
             <div className="column is-one-third is-size-6">
               <HomeName game={game} clubIds={clubIds} bold={winner === "home"} />
             </div>
-            <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
-              -
-            </div>
-            <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-              {guest}
-            </div>
-            <div className="column is-one-third is-size-6 is-hidden-tablet">{guest}</div>
+            {isTablet ? (
+              <>
+                <div className="column is-one-third is-size-6 has-text-centered">-</div>
+                <div className="column is-one-third is-size-6 has-text-right">{guest}</div>
+              </>
+            ) : (
+              <div className="column is-one-third is-size-6">{guest}</div>
+            )}
           </div>
           {score}
           <div className="columns is-gapless is-size-7 is-mobile">

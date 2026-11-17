@@ -55,8 +55,8 @@ test("limits the amount of games with the query parameters", async () => {
   vi.spyOn(globalThis, "fetch").mockReturnValue(respond(games));
   renderTeam("?results=1");
   await screen.findAllByText("Letzte Resultate");
-  // latest game first, shown once in the table and once in the cards
-  expect(screen.getAllByText(/Heim 3/)).toHaveLength(2);
+  // latest game first, rendered once (table on desktop)
+  expect(screen.getAllByText(/Heim 3/)).toHaveLength(1);
   expect(screen.queryByText(/Heim 2/)).not.toBeInTheDocument();
 });
 

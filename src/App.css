@@ -241,32 +241,10 @@ strong {
   color: var(--primary) !important;
 }
 
-/* responsive visibility */
-@media screen and (max-width: 768px) {
-  .is-hidden-mobile {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .is-hidden-tablet {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .is-hidden-touch {
-    display: none !important;
-  }
-}
-
+/* responsive layout */
 @media screen and (min-width: 1024px) {
   .section {
     padding: 3rem;
-  }
-
-  .is-hidden-desktop {
-    display: none !important;
   }
 
   .container {

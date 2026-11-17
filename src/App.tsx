@@ -1,4 +1,3 @@
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./App.scss";
 
 import { Route, BrowserRouter as Router, Routes } from "react-router";

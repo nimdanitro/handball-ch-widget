@@ -1,5 +1,8 @@
-import { Link } from "react-router";
 import type { GamesPlanned } from "../types/games";
+import GameCard from "./GameCard";
+import GamesSection from "./GamesSection";
+import GamesTable from "./GamesTable";
+import { VenueLink } from "./gameParts";
 
 interface NextGamesProps {
   games: GamesPlanned[];
@@ -8,76 +11,16 @@ interface NextGamesProps {
 
 function NextGamesTable({ games, clubIds }: NextGamesProps) {
   return (
-    <div className="table-container">
-      <table className="table is-hoverable is-narrow is-fullwidth is-striped">
-        <thead>
-          <tr>
-            <th>Datum</th>
-            <th>Uhrzeit</th>
-            <th>Gruppe/Cup</th>
-            <th>Heim</th>
-            <th>Gast</th>
-            <th>Halle</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {games.map((game) => (
-            <tr key={game.gameId}>
-              <td>
-                {new Intl.DateTimeFormat("de-CH", {
-                  dateStyle: "medium",
-                }).format(new Date(game.gameDateTime))}
-              </td>
-              <td>
-                {new Intl.DateTimeFormat("de-CH", {
-                  hour: "numeric",
-                  minute: "numeric",
-                }).format(new Date(game.gameDateTime))}
-              </td>
-              <td>{game.leagueLong}</td>
-              <td>
-                {clubIds?.includes(game.clubTeamAId) ? (
-                  <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
-                ) : (
-                  game.teamAName
-                )}
-              </td>
-              <td>
-                {clubIds?.includes(game.clubTeamBId) ? (
-                  <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
-                ) : (
-                  game.teamBName
-                )}
-              </td>
-              <td>
-                {game.venueAddress && game.venueCity && game.venue && (
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
-                      " ",
-                      "+",
-                    )},+${game.venueCity.replaceAll(" ", "+")}`}
-                  >
-                    {game.venue}
-                  </a>
-                )}
-              </td>
-              <td>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
-                >
-                  Live-Ticker
-                </a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <GamesTable
+      games={games}
+      clubIds={clubIds}
+      extraHeaders={["Halle"]}
+      extraCells={(game) => (
+        <td>
+          <VenueLink game={game} />
+        </td>
+      )}
+    />
   );
 }
 
@@ -85,78 +28,14 @@ function NextGamesCard({ games, clubIds }: NextGamesProps) {
   return (
     <>
       {games.map((game) => (
-        <div className="card mb-1" key={game.gameId}>
-          <div className="card-content">
-            <div className="content">
-              <div className="container">
-                <div className="columns is-gapless is-size-7 is-mobile">
-                  <div className="column has-text-primary">
-                    <p>{game.leagueShort}</p>
-                  </div>
-                  <div className="column is-size-7 is-half has-text-right">
-                    <a
-                      className="has-text-primary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={`https://www.handball.ch/de/matchcenter/spiele/${game.gameId}`}
-                    >
-                      Live-Ticker
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="columns mt-1 mb-1 is-gapless">
-                <div className="column is-one-third is-size-6">
-                  {clubIds?.includes(game.clubTeamAId) ? (
-                    <Link to={`/team/${game.teamAId}`}>{game.teamAName}</Link>
-                  ) : (
-                    game.teamAName
-                  )}
-                </div>
-                <div className="column is-one-third is-size-6 has-text-centered is-hidden-mobile">
-                  -
-                </div>
-                <div className="column is-one-third is-size-6 has-text-right is-hidden-mobile">
-                  {clubIds?.includes(game.clubTeamBId) ? (
-                    <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
-                  ) : (
-                    game.teamBName
-                  )}
-                </div>
-                <div className="column is-one-third is-size-6 is-hidden-tablet">
-                  {clubIds?.includes(game.clubTeamBId) ? (
-                    <Link to={`/team/${game.teamBId}`}>{game.teamBName}</Link>
-                  ) : (
-                    game.teamBName
-                  )}
-                </div>
-              </div>
-              <div className="columns is-gapless is-size-7 is-mobile">
-                <div className="column has-text-primary">
-                  {new Intl.DateTimeFormat("de-CH", {
-                    dateStyle: "medium",
-                    timeStyle: "short",
-                  }).format(new Date(game.gameDateTime))}
-                </div>
-                <div className="column is-size-7 is-half has-text-right">
-                  {game.venueAddress && game.venueCity && game.venue && (
-                    <a
-                      className="has-text-primary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={`https://www.google.com/maps/place/${game.venueAddress.replaceAll(
-                        " ",
-                        "+",
-                      )},+${game.venueCity.replaceAll(" ", "+")}`}
-                    >
-                      {game.venue}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <GameCard
+          key={game.gameId}
+          game={game}
+          clubIds={clubIds}
+          linkLabel="Live-Ticker"
+          tight
+          footerRight={<VenueLink game={game} className="has-text-primary" />}
+        />
       ))}
     </>
   );
@@ -166,17 +45,11 @@ function NextGames({ games, clubIds }: NextGamesProps) {
   if (games.length === 0) return null;
 
   return (
-    <section className="section">
-      <div className="container">
-        <h1 className="title is-uppercase is-size-4">Nächste Spiele</h1>
-        <div className="is-hidden-touch">
-          <NextGamesTable games={games} clubIds={clubIds} />
-        </div>
-        <div className="is-hidden-desktop">
-          <NextGamesCard games={games} clubIds={clubIds} />
-        </div>
-      </div>
-    </section>
+    <GamesSection
+      title="Nächste Spiele"
+      table={<NextGamesTable games={games} clubIds={clubIds} />}
+      cards={<NextGamesCard games={games} clubIds={clubIds} />}
+    />
   );
 }
 

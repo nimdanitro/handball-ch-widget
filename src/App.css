@@ -210,63 +210,41 @@ strong {
 }
 
 .is-size-4 {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
 }
 
 .is-size-6 {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .is-size-7 {
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
 }
 
 .is-uppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .has-text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .has-text-centered {
-  text-align: center;
+  text-align: center !important;
 }
 
 .has-text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .has-text-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
-/* responsive visibility */
-@media screen and (max-width: 768px) {
-  .is-hidden-mobile {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .is-hidden-tablet {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .is-hidden-touch {
-    display: none;
-  }
-}
-
+/* responsive layout */
 @media screen and (min-width: 1024px) {
   .section {
     padding: 3rem;
-  }
-
-  .is-hidden-desktop {
-    display: none;
   }
 
   .container {

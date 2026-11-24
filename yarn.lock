@@ -1427,10 +1427,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^5.20261120.1":
-  version: 5.20261120.1
-  resolution: "@cloudflare/workers-types@npm:5.20261120.1"
-  checksum: 10/263b98e9a1a900973c8635a87bea2a3643e596eb1a80d22937cd9f3d20761c9c254cfb7b7da1d277eb50ddd3fa305335fa66e08014b1a70f910cc5d75b5eef8a
+"@cloudflare/workers-types@npm:^5.20261121.1":
+  version: 5.20261121.1
+  resolution: "@cloudflare/workers-types@npm:5.20261121.1"
+  checksum: 10/b52b2c2bbd09305a392174189d0b8fd437cf5a25c69ec303b77623c33d75f63a626e0b1874992065cf1fc2088b440a16bd3ffae5d870c82a41b0b347b63c9b1e
   languageName: node
   linkType: hard
 
@@ -2941,7 +2941,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^5.20261120.1"
+    "@cloudflare/workers-types": "npm:^5.20261121.1"
     "@fontsource/exo": "npm:^5.3.0"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^7.0.1"

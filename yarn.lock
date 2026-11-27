@@ -1427,10 +1427,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^5.20261123.1":
-  version: 5.20261123.1
-  resolution: "@cloudflare/workers-types@npm:5.20261123.1"
-  checksum: 10/49a36102bb784bb6e35bd9ea15dbb2027c119d1958e605ec1f7573584fd004e096c6c2affe15f51cd3275cfb2f7404ec08ca3c6229136aa717582abc77400e49
+"@cloudflare/workers-types@npm:^5.20261124.2":
+  version: 5.20261124.2
+  resolution: "@cloudflare/workers-types@npm:5.20261124.2"
+  checksum: 10/870d799ef6c271c2efbfc5917d82bac0bbb2bc0d66174bbfdb8529f5f94759051b8aa1301dbe5a3347bc35ff7764681cd1fd9b2593f736bd8e6c7491fa556087
   languageName: node
   linkType: hard
 
@@ -2692,12 +2692,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^26.6.6":
-  version: 26.6.6
-  resolution: "@types/node@npm:26.6.6"
+"@types/node@npm:^26.6.7":
+  version: 26.6.7
+  resolution: "@types/node@npm:26.6.7"
   dependencies:
     undici-types: "npm:~8.9.0"
-  checksum: 10/07c6c6fc1f5cc89c700ac9ebcebd42b000fef234bf0b80e9461a8f077105f15faf16df95b83745e0c0e37338d1fbc28cb402ef27b5787fd7a57b492c926ff7ae
+  checksum: 10/6990282cd7f25609da26bca026f9ab62c94bf67b82c38b81608a8d6b34d51b7e91a95831b0dc55fa9c9d8066bc3b0def95308b1a61a275e6dd228ef82689bc44
   languageName: node
   linkType: hard
 
@@ -2710,12 +2710,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.3.0":
-  version: 19.3.0
-  resolution: "@types/react@npm:19.3.0"
+"@types/react@npm:^19.3.1":
+  version: 19.3.1
+  resolution: "@types/react@npm:19.3.1"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10/2f4589222fd9c512e1ef78e65f334ade8777400add8ec0803fcc3a044761679b7984ba8410a890af24255383c3251a568bb692b60acfa22397ba0a64b2e032bf
+  checksum: 10/5959f82d9cc3827b460d53d016fb4006f998df22c187101beb11f15a2a0207b2ce6c808eea3412ad283456aa289dca918ae668684c36e50a14a1e673d593d098
   languageName: node
   linkType: hard
 
@@ -2941,14 +2941,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "HandballCH-widget@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^5.20261123.1"
+    "@cloudflare/workers-types": "npm:^5.20261124.2"
     "@fontsource/exo": "npm:^5.3.0"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^7.0.1"
     "@testing-library/react": "npm:^16.3.3"
     "@testing-library/user-event": "npm:^14.6.13"
-    "@types/node": "npm:^26.6.6"
-    "@types/react": "npm:^19.3.0"
+    "@types/node": "npm:^26.6.7"
+    "@types/react": "npm:^19.3.1"
     "@types/react-dom": "npm:^19.3.0"
     "@vite-pwa/assets-generator": "npm:^2.0.0"
     "@vitejs/plugin-react": "npm:^6.3.0"

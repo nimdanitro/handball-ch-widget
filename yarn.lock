@@ -2957,7 +2957,7 @@ __metadata:
     oxlint: "npm:^1.95.0"
     react: "npm:^19.3.1"
     react-dom: "npm:^19.3.1"
-    react-router: "npm:^8.5.2"
+    react-router: "npm:^8.5.3"
     replace-env: "npm:^1.0.4"
     typescript: "npm:^7.0.2"
     vite: "npm:^8.3.8"
@@ -5777,9 +5777,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^8.5.2":
-  version: 8.5.2
-  resolution: "react-router@npm:8.5.2"
+"react-router@npm:^8.5.3":
+  version: 8.5.3
+  resolution: "react-router@npm:8.5.3"
   dependencies:
     "@remix-run/route-pattern": "npm:^0.22.1"
     cookie-es: "npm:^3.1.1"
@@ -5795,7 +5795,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10/b3fb514b2690ed03458cec39735f3afae1f3a5d8ef3ce0b05d61d79a5da653e352b265cbad596b201810105b865a1cdfa8841e5bb9fd9a34f8560c635269210e
+  checksum: 10/324e3ff2ded5e88f688517a688069850452df1535dce01b4bf3d1461cdbd7553cbde31d642878f73a5c4c7f5284d3023eabff9f82c65e33ffb2fdbb6adf348ed
   languageName: node
   linkType: hard
 
